@@ -1,0 +1,507 @@
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (29, 1067100, 'StoreJobStatus', '2022-01-13 11:42:33.741923', '2022-06-01 16:30:00.135849', 12, '2022-01-01 16:30:00.135000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">159</span>, in _new_conn
+    conn <span style="color: #666666">=</span> connection<span style="color: #666666">.</span>create_connection(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/connection.py&quot;</span>, line <span style="color: #666666">80</span>, in create_connection
+    <span style="color: #008000; font-weight: bold">raise</span> err
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/connection.py&quot;</span>, line <span style="color: #666666">70</span>, in create_connection
+    sock<span style="color: #666666">.</span>connect(sa)
+<span style="color: #FF0000">ConnectionRefusedError</span>: [Errno 111] Connection refused
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">600</span>, in urlopen
+    httplib_response <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_make_request(conn, method, url,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">355</span>, in _make_request
+    conn<span style="color: #666666">.</span>request(method, url, <span style="color: #666666">**</span>httplib_request_kw)
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/http/client.py&quot;</span>, line <span style="color: #666666">1256</span>, in request
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>_send_request(method, url, body, headers, encode_chunked)
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/http/client.py&quot;</span>, line <span style="color: #666666">1302</span>, in _send_request
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>endheaders(body, encode_chunked<span style="color: #666666">=</span>encode_chunked)
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/http/client.py&quot;</span>, line <span style="color: #666666">1251</span>, in endheaders
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>_send_output(message_body, encode_chunked<span style="color: #666666">=</span>encode_chunked)
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/http/client.py&quot;</span>, line <span style="color: #666666">1011</span>, in _send_output
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>send(msg)
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/http/client.py&quot;</span>, line <span style="color: #666666">951</span>, in send
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>connect()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">183</span>, in connect
+    conn <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_new_conn()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">168</span>, in _new_conn
+    <span style="color: #008000; font-weight: bold">raise</span> NewConnectionError(
+<span style="color: #FF0000">urllib3.exceptions.NewConnectionError</span>: &lt;urllib3.connection.HTTPConnection object at 0x7f707c63c6d0&gt;: Failed to establish a new connection: [Errno 111] Connection refused
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">439</span>, in send
+    resp <span style="color: #666666">=</span> conn<span style="color: #666666">.</span>urlopen(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">640</span>, in urlopen
+    retries <span style="color: #666666">=</span> retries<span style="color: #666666">.</span>increment(method, url, error<span style="color: #666666">=</span>e, _pool<span style="color: #666666">=</span><span style="color: #008000">self</span>,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/retry.py&quot;</span>, line <span style="color: #666666">399</span>, in increment
+    <span style="color: #008000; font-weight: bold">raise</span> MaxRetryError(_pool, url, error <span style="color: #AA22FF; font-weight: bold">or</span> ResponseError(cause))
+<span style="color: #FF0000">urllib3.exceptions.MaxRetryError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=9000): Max retries exceeded with url: /analytics/stocker/webhook (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7f707c63c6d0&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/store_job_status.py&quot;</span>, line <span style="color: #666666">27</span>, in job_status_check
+    check_sync_act_on_job_status(job<span style="color: #666666">.</span>org_id)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/lib/store_job_status.py&quot;</span>, line <span style="color: #666666">184</span>, in check_sync_act_on_job_status
+    send_webhook(webhook_data)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/lib/store_job_status.py&quot;</span>, line <span style="color: #666666">19</span>, in send_webhook
+    requests<span style="color: #666666">.</span>post(webhook_url, data<span style="color: #666666">=</span>json<span style="color: #666666">.</span>dumps(webhook_data), headers<span style="color: #666666">=</span>headers)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">116</span>, in post
+    <span style="color: #008000; font-weight: bold">return</span> request(<span style="color: #BA2121">&#39;post&#39;</span>, url, data<span style="color: #666666">=</span>data, json<span style="color: #666666">=</span>json, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">60</span>, in request
+    <span style="color: #008000; font-weight: bold">return</span> session<span style="color: #666666">.</span>request(method<span style="color: #666666">=</span>method, url<span style="color: #666666">=</span>url, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">533</span>, in request
+    resp <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>send(prep, <span style="color: #666666">**</span>send_kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">646</span>, in send
+    r <span style="color: #666666">=</span> adapter<span style="color: #666666">.</span>send(request, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">516</span>, in send
+    <span style="color: #008000; font-weight: bold">raise</span> <span style="color: #D2413A; font-weight: bold">ConnectionError</span>(e, request<span style="color: #666666">=</span>request)
+<span style="color: #FF0000">requests.exceptions.ConnectionError</span>: HTTPConnectionPool(host=&#39;localhost&#39;, port=9000): Max retries exceeded with url: /analytics/stocker/webhook (Caused by NewConnectionError(&#39;&lt;urllib3.connection.HTTPConnection object at 0x7f707c63c6d0&gt;: Failed to establish a new connection: [Errno 111] Connection refused&#39;))
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (30, 1067100, 'ProcessStoreJobMagento2x', '2022-01-13 11:42:33.741923', '2022-06-01 16:30:00.135849', 15, '2022-01-01 16:30:00.135000', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (34, 1067100, 'FetchRefundsJobMagento2x', '2022-06-13 13:29:39.431018', '2022-06-13 13:44:00.000000', 15, '2022-06-13 12:05:28.385629', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (33, 1067100, 'ProcessCustomersJobMagento2x', '2022-06-13 13:29:39.431018', '2022-06-13 13:44:00.000000', 15, '2022-06-13 12:05:28.385629', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (28, 1067100, 'ProcessProductJobMagento2x', '2022-06-13 13:29:39.431018', '2022-06-13 13:44:00.000000', 15, '2022-06-13 12:05:28.385629', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (31, 1067100, 'ProcessVariantsJobMagento2x', '2022-06-13 13:29:39.431018', '2022-06-13 13:44:00.000000', 15, '2022-06-13 12:05:28.385629', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (37, 1067100, 'FetchRefundItemsJobMagento2x', '2022-06-13 13:29:39.431018', '2022-06-13 13:44:00.000000', 15, '2022-06-13 12:05:28.385629', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (2, 1234, 'FetchGaTransactionJob', '1970-01-01 00:00:00.000000', '2022-06-01 07:37:44.218843', 180, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (7, 1234, 'ProcessOrdersJob', '1970-01-01 00:00:00.000000', '2022-06-01 07:17:44.218843', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (10, 1234, 'ProcessProductJob', '1970-01-01 00:00:00.000000', '2022-06-01 07:32:44.218843', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (11, 1234, 'ProcessStoreJob', '1970-01-01 00:00:00.000000', '2022-06-01 07:32:44.218843', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (13, 1234, 'AnalyzeRFMJob', '1970-01-01 00:00:00.000000', '2022-06-01 07:37:44.218843', 360, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (8, 1234, 'ProcessVariantsJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (9, 1234, 'ProcessCustomersJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1, 1234, 'StoreJobStatus', '2022-06-01 08:47:35.884796', '2022-06-01 08:59:00.000000', 12, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (12, 1234, 'ShopifyCustomerProxyWebhook', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">159</span>, in _new_conn
+    conn <span style="color: #666666">=</span> connection<span style="color: #666666">.</span>create_connection(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/connection.py&quot;</span>, line <span style="color: #666666">57</span>, in create_connection
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, socket<span style="color: #666666">.</span>SOCK_STREAM):
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/socket.py&quot;</span>, line <span style="color: #666666">918</span>, in getaddrinfo
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> _socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, <span style="color: #008000">type</span>, proto, flags):
+<span style="color: #FF0000">socket.gaierror</span>: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">600</span>, in urlopen
+    httplib_response <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_make_request(conn, method, url,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">344</span>, in _make_request
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>_validate_conn(conn)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">843</span>, in _validate_conn
+    conn<span style="color: #666666">.</span>connect()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">316</span>, in connect
+    conn <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_new_conn()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">168</span>, in _new_conn
+    <span style="color: #008000; font-weight: bold">raise</span> NewConnectionError(
+<span style="color: #FF0000">urllib3.exceptions.NewConnectionError</span>: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727c6f3d0&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">439</span>, in send
+    resp <span style="color: #666666">=</span> conn<span style="color: #666666">.</span>urlopen(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">640</span>, in urlopen
+    retries <span style="color: #666666">=</span> retries<span style="color: #666666">.</span>increment(method, url, error<span style="color: #666666">=</span>e, _pool<span style="color: #666666">=</span><span style="color: #008000">self</span>,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/retry.py&quot;</span>, line <span style="color: #666666">399</span>, in increment
+    <span style="color: #008000; font-weight: bold">raise</span> MaxRetryError(_pool, url, error <span style="color: #AA22FF; font-weight: bold">or</span> ResponseError(cause))
+<span style="color: #FF0000">urllib3.exceptions.MaxRetryError</span>: HTTPSConnectionPool(host=&#39;snitch-4m-clothing-llp.myshopify.com&#39;, port=443): Max retries exceeded with url: /admin/api/2019-10/customers.json?created_at_min=2022-06-01T13%3A17%3A36.327531&amp;created_at_max=2022-06-01T14%3A17%3A36.327576&amp;limit=250&amp;fields=id%2Ccreated_at%2Cupdated_at%2Cstate%2Cemail%2Cfirst_name%2Clast_name%2Clast_order_id%2Cdefault_address%2Ctax_exempt%2Cphone%2Caccepts_marketing (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727c6f3d0&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/shopify_customer_proxy_webhook.py&quot;</span>, line <span style="color: #666666">51</span>, in wigzo_fetch_hack
+    <span style="color: #008000; font-weight: bold">for</span> response <span style="color: #AA22FF; font-weight: bold">in</span> api<span style="color: #666666">.</span>paged():
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/lib/shopify.py&quot;</span>, line <span style="color: #666666">269</span>, in paged
+    response <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(url, headers<span style="color: #666666">=</span><span style="color: #008000">self</span><span style="color: #666666">.</span>headers, params<span style="color: #666666">=</span>params)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">75</span>, in get
+    <span style="color: #008000; font-weight: bold">return</span> request(<span style="color: #BA2121">&#39;get&#39;</span>, url, params<span style="color: #666666">=</span>params, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">60</span>, in request
+    <span style="color: #008000; font-weight: bold">return</span> session<span style="color: #666666">.</span>request(method<span style="color: #666666">=</span>method, url<span style="color: #666666">=</span>url, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">533</span>, in request
+    resp <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>send(prep, <span style="color: #666666">**</span>send_kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">646</span>, in send
+    r <span style="color: #666666">=</span> adapter<span style="color: #666666">.</span>send(request, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">516</span>, in send
+    <span style="color: #008000; font-weight: bold">raise</span> <span style="color: #D2413A; font-weight: bold">ConnectionError</span>(e, request<span style="color: #666666">=</span>request)
+<span style="color: #FF0000">requests.exceptions.ConnectionError</span>: HTTPSConnectionPool(host=&#39;snitch-4m-clothing-llp.myshopify.com&#39;, port=443): Max retries exceeded with url: /admin/api/2019-10/customers.json?created_at_min=2022-06-01T13%3A17%3A36.327531&amp;created_at_max=2022-06-01T14%3A17%3A36.327576&amp;limit=250&amp;fields=id%2Ccreated_at%2Cupdated_at%2Cstate%2Cemail%2Cfirst_name%2Clast_name%2Clast_order_id%2Cdefault_address%2Ctax_exempt%2Cphone%2Caccepts_marketing (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727c6f3d0&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (14, 9804, 'StoreJobStatus', '1970-01-01 00:00:00.000000', '2022-06-01 08:58:49.790592', 12, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (35, 1067100, 'FetchGaTransactionJob', '2022-01-13 11:42:33.741923', '2022-06-13 14:42:00.000000', 180, '2022-06-01 16:30:00.135849', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (27, 1067100, 'FetchProductsJobMagento2x', '2022-01-13 11:42:33.741923', '2022-06-13 10:34:00.000000', 15, '2022-01-01 16:30:00.135000', 'ERROR', 3, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py&quot;</span>, line <span style="color: #666666">1243</span>, in _execute_context
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>dialect<span style="color: #666666">.</span>do_execute(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py&quot;</span>, line <span style="color: #666666">552</span>, in do_execute
+    cursor<span style="color: #666666">.</span>execute(statement, parameters)
+<span style="color: #FF0000">psycopg2.errors.NotNullViolation</span>: null value in column &quot;product_id&quot; violates not-null constraint
+<span style="border: 1px solid #FF0000">DETAIL:  Failing row contains (14, 1067100, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0, 0, 0, f, 0, null, null, 0, null, null, STORE, null).</span>
+
+
+<span style="color: #0044DD">The above exception was the direct cause of the following exception:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/magento2x/fetch_product_job_magento2x.py&quot;</span>, line <span style="color: #666666">53</span>, in persist_response
+    update_shopify_product(product, <span style="color: #008000; font-weight: bold">None</span>)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/services/shopify.py&quot;</span>, line <span style="color: #666666">22</span>, in update_shopify_model
+    analytics_db<span style="color: #666666">.</span>execute(do_update_stmt)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/db/engine.py&quot;</span>, line <span style="color: #666666">78</span>, in execute
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>engine<span style="color: #666666">.</span>execute(statement)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py&quot;</span>, line <span style="color: #666666">2169</span>, in execute
+    <span style="color: #008000; font-weight: bold">return</span> connection<span style="color: #666666">.</span>execute(statement, <span style="color: #666666">*</span>multiparams, <span style="color: #666666">**</span>params)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py&quot;</span>, line <span style="color: #666666">988</span>, in execute
+    <span style="color: #008000; font-weight: bold">return</span> meth(<span style="color: #008000">self</span>, multiparams, params)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/sql/elements.py&quot;</span>, line <span style="color: #666666">287</span>, in _execute_on_connection
+    <span style="color: #008000; font-weight: bold">return</span> connection<span style="color: #666666">.</span>_execute_clauseelement(<span style="color: #008000">self</span>, multiparams, params)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py&quot;</span>, line <span style="color: #666666">1101</span>, in _execute_clauseelement
+    ret <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_execute_context(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py&quot;</span>, line <span style="color: #666666">1247</span>, in _execute_context
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>_handle_dbapi_exception(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py&quot;</span>, line <span style="color: #666666">1466</span>, in _handle_dbapi_exception
+    util<span style="color: #666666">.</span>raise_from_cause(sqlalchemy_exception, exc_info)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py&quot;</span>, line <span style="color: #666666">398</span>, in raise_from_cause
+    reraise(<span style="color: #008000">type</span>(exception), exception, tb<span style="color: #666666">=</span>exc_tb, cause<span style="color: #666666">=</span>cause)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/util/compat.py&quot;</span>, line <span style="color: #666666">152</span>, in reraise
+    <span style="color: #008000; font-weight: bold">raise</span> value<span style="color: #666666">.</span>with_traceback(tb)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/base.py&quot;</span>, line <span style="color: #666666">1243</span>, in _execute_context
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>dialect<span style="color: #666666">.</span>do_execute(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/sqlalchemy/engine/default.py&quot;</span>, line <span style="color: #666666">552</span>, in do_execute
+    cursor<span style="color: #666666">.</span>execute(statement, parameters)
+<span style="color: #FF0000">sqlalchemy.exc.IntegrityError</span>: (psycopg2.errors.NotNullViolation) null value in column &quot;product_id&quot; violates not-null constraint
+<span style="border: 1px solid #FF0000">DETAIL:  Failing row contains (14, 1067100, null, null, null, null, null, null, null, null, null, null, null, null, 0, 0, 0, 0, f, 0, null, null, 0, null, null, STORE, null).</span>
+
+<span style="border: 1px solid #FF0000">[SQL: INSERT INTO product (org_id, created_at, published_at, updated_at, product_id, title, body_html, vendor, product_type, handle, image, tags, manufacturer, is_processed, revenue, gross_profit, gross_margin, amount_refunded, percent_refunded, cost_of_goods_sold, data_source) VALUES (%(org_id)s, %(created_at)s, %(published_at)s, %(updated_at)s, %(product_id)s, %(title)s, %(body_html)s, %(vendor)s, %(product_type)s, %(handle)s, %(image)s, %(tags)s, %(manufacturer)s, %(is_processed)s, %(revenue)s, %(gross_profit)s, %(gross_margin)s, %(amount_refunded)s, %(percent_refunded)s, %(cost_of_goods_sold)s, %(data_source)s) ON CONFLICT ON CONSTRAINT uniq_product_org_id_product_id DO UPDATE SET org_id = %(param_1)s, created_at = %(param_2)s, published_at = %(param_3)s, updated_at = %(param_4)s, product_id = %(param_5)s, title = %(param_6)s, body_html = %(param_7)s, vendor = %(param_8)s, product_type = %(param_9)s, handle = %(param_10)s, image = %(param_11)s, tags = %(param_12)s, manufacturer = %(param_13)s RETURNING product.id]</span>
+<span style="border: 1px solid #FF0000">[parameters: {&#39;org_id&#39;: 1067100, &#39;created_at&#39;: None, &#39;published_at&#39;: None, &#39;updated_at&#39;: None, &#39;product_id&#39;: None, &#39;title&#39;: None, &#39;body_html&#39;: None, &#39;vendor&#39;: None, &#39;product_type&#39;: None, &#39;handle&#39;: None, &#39;image&#39;: None, &#39;tags&#39;: None, &#39;manufacturer&#39;: None, &#39;is_processed&#39;: False, &#39;revenue&#39;: 0, &#39;gross_profit&#39;: 0, &#39;gross_margin&#39;: 0, &#39;amount_refunded&#39;: 0, &#39;percent_refunded&#39;: 0, &#39;cost_of_goods_sold&#39;: 0, &#39;data_source&#39;: &#39;STORE&#39;, &#39;param_1&#39;: 1067100, &#39;param_2&#39;: None, &#39;param_3&#39;: None, &#39;param_4&#39;: None, &#39;param_5&#39;: None, &#39;param_6&#39;: None, &#39;param_7&#39;: None, &#39;param_8&#39;: None, &#39;param_9&#39;: None, &#39;param_10&#39;: None, &#39;param_11&#39;: None, &#39;param_12&#39;: None, &#39;param_13&#39;: None}]</span>
+<span style="border: 1px solid #FF0000">(Background on this error at: http://sqlalche.me/e/gkpj)</span>
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (39, 1067100, 'FetchOrderItemsJobMagento2x', '2022-06-13 13:29:39.431018', '2022-06-13 13:44:00.000000', 15, '2022-06-13 12:05:28.385629', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (32, 1067100, 'FetchOrdersJobMagento2x', '2022-06-13 13:29:39.431018', '2022-06-13 13:44:00.000000', 15, '2022-06-13 12:05:28.385629', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (36, 1067100, 'ProcessOrdersJobMagento2x', '2022-06-13 13:31:18.698088', '2022-06-13 13:46:00.000000', 15, '2022-01-13 11:42:33.741923', 'WAITING', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (3, 1234, 'FetchOrdersJob', '2022-06-01 07:07:57.055379', '2022-06-01 07:22:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">365</span>, in paged_async
+    <span style="color: #008000; font-weight: bold">raise</span> ex
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">353</span>, in paged_async
+    response<span style="color: #666666">.</span>raise_for_status()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/models.py&quot;</span>, line <span style="color: #666666">940</span>, in raise_for_status
+    <span style="color: #008000; font-weight: bold">raise</span> HTTPError(http_error_msg, response<span style="color: #666666">=</span><span style="color: #008000">self</span>)
+<span style="color: #FF0000">requests.exceptions.HTTPError</span>: 401 Client Error: Unauthorized for url: https://snitch-4m-clothing-llp.myshopify.com/admin/api/2019-10/orders.json?status=any&amp;fulfillment_status=any&amp;limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T07%3A07%3A57.055379&amp;order=created_at+asc&amp;fields=id%2Cemail%2Cclosed_at%2Ccreated_at%2Cupdated_at%2Corder_number%2Ctotal_price%2Ctotal_tax%2Ctaxes_included%2Ctotal_discounts%2Cfulfillment_status%2Cfinancial_status%2Ccustomer%2Cshipping_address%2Ccurrency%2Cline_items%2Crefunds%2Ccheckout_token%2Ccart_token%2Creferring_site%2Clanding_site%2Cdiscount_codes%2Cphone%2Ctotal_shipping_price_set%2Ctotal_line_items_price%2Cname%2Cbilling_address
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (6, 1234, 'FetchCheckoutsJob', '2022-06-01 07:07:57.055379', '2022-06-01 07:22:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">365</span>, in paged_async
+    <span style="color: #008000; font-weight: bold">raise</span> ex
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">353</span>, in paged_async
+    response<span style="color: #666666">.</span>raise_for_status()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/models.py&quot;</span>, line <span style="color: #666666">940</span>, in raise_for_status
+    <span style="color: #008000; font-weight: bold">raise</span> HTTPError(http_error_msg, response<span style="color: #666666">=</span><span style="color: #008000">self</span>)
+<span style="color: #FF0000">requests.exceptions.HTTPError</span>: 401 Client Error: Unauthorized for url: https://snitch-4m-clothing-llp.myshopify.com/admin/api/2019-10/checkouts.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T07%3A07%3A57.055379&amp;order=created_at+asc&amp;fields=id%2Cline_items%2Ctoken%2Ccart_token%2Cemail%2Cphone%2Ccustomer_id%2Cgateway%2Ccreated_at%2Cupdated_at%2Ccompleted_at%2Cclosed_at%2Clanding_site%2Cnote%2Creferring_site%2Ccurrency%2Cpresentment_currency%2Csource_identifier%2Csource_url%2Csource_name%2Ctotal_discounts%2Ctotal_line_items_price%2Ctotal_line_items_price%2Ctotal_price%2Ctotal_tax%2Cabandoned_checkout_url%2Cdiscount_codes_json%2Csource
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (5, 1234, 'FetchProductsJob', '2022-06-01 07:07:57.055379', '2022-06-01 07:22:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">365</span>, in paged_async
+    <span style="color: #008000; font-weight: bold">raise</span> ex
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">353</span>, in paged_async
+    response<span style="color: #666666">.</span>raise_for_status()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/models.py&quot;</span>, line <span style="color: #666666">940</span>, in raise_for_status
+    <span style="color: #008000; font-weight: bold">raise</span> HTTPError(http_error_msg, response<span style="color: #666666">=</span><span style="color: #008000">self</span>)
+<span style="color: #FF0000">requests.exceptions.HTTPError</span>: 401 Client Error: Unauthorized for url: https://snitch-4m-clothing-llp.myshopify.com/admin/api/2019-10/products.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T07%3A07%3A57.055379&amp;order=created_at+asc&amp;fields=id%2Ctitle%2Cbody_html%2Cvendor%2Cproduct_type%2Ccreated_at%2Chandle%2Cupdated_at%2Cpublished_at%2Ctaxes_included%2Cimage%2Cvariants%2Ctags
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (4, 1234, 'FetchCustomersJob', '2022-06-01 07:07:57.055379', '2022-06-01 07:22:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">365</span>, in paged_async
+    <span style="color: #008000; font-weight: bold">raise</span> ex
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">353</span>, in paged_async
+    response<span style="color: #666666">.</span>raise_for_status()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/models.py&quot;</span>, line <span style="color: #666666">940</span>, in raise_for_status
+    <span style="color: #008000; font-weight: bold">raise</span> HTTPError(http_error_msg, response<span style="color: #666666">=</span><span style="color: #008000">self</span>)
+<span style="color: #FF0000">requests.exceptions.HTTPError</span>: 401 Client Error: Unauthorized for url: https://snitch-4m-clothing-llp.myshopify.com/admin/api/2019-10/customers.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T07%3A07%3A57.055379&amp;order=created_at+asc&amp;fields=id%2Ccreated_at%2Cupdated_at%2Cstate%2Cemail%2Cfirst_name%2Clast_name%2Clast_order_id%2Cdefault_address%2Ctax_exempt%2Cphone%2Caccepts_marketing
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (16, 9804, 'FetchOrdersJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">159</span>, in _new_conn
+    conn <span style="color: #666666">=</span> connection<span style="color: #666666">.</span>create_connection(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/connection.py&quot;</span>, line <span style="color: #666666">57</span>, in create_connection
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, socket<span style="color: #666666">.</span>SOCK_STREAM):
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/socket.py&quot;</span>, line <span style="color: #666666">918</span>, in getaddrinfo
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> _socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, <span style="color: #008000">type</span>, proto, flags):
+<span style="color: #FF0000">socket.gaierror</span>: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">600</span>, in urlopen
+    httplib_response <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_make_request(conn, method, url,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">344</span>, in _make_request
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>_validate_conn(conn)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">843</span>, in _validate_conn
+    conn<span style="color: #666666">.</span>connect()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">316</span>, in connect
+    conn <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_new_conn()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">168</span>, in _new_conn
+    <span style="color: #008000; font-weight: bold">raise</span> NewConnectionError(
+<span style="color: #FF0000">urllib3.exceptions.NewConnectionError</span>: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727b0ef70&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">439</span>, in send
+    resp <span style="color: #666666">=</span> conn<span style="color: #666666">.</span>urlopen(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">640</span>, in urlopen
+    retries <span style="color: #666666">=</span> retries<span style="color: #666666">.</span>increment(method, url, error<span style="color: #666666">=</span>e, _pool<span style="color: #666666">=</span><span style="color: #008000">self</span>,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/retry.py&quot;</span>, line <span style="color: #666666">399</span>, in increment
+    <span style="color: #008000; font-weight: bold">raise</span> MaxRetryError(_pool, url, error <span style="color: #AA22FF; font-weight: bold">or</span> ResponseError(cause))
+<span style="color: #FF0000">urllib3.exceptions.MaxRetryError</span>: HTTPSConnectionPool(host=&#39;https&#39;, port=443): Max retries exceeded with url: //www.jkcart.com//admin/api/2019-10/orders.json?status=any&amp;fulfillment_status=any&amp;limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T08%3A47%3A35.884796&amp;order=created_at+asc&amp;fields=id%2Cemail%2Cclosed_at%2Ccreated_at%2Cupdated_at%2Corder_number%2Ctotal_price%2Ctotal_tax%2Ctaxes_included%2Ctotal_discounts%2Cfulfillment_status%2Cfinancial_status%2Ccustomer%2Cshipping_address%2Ccurrency%2Cline_items%2Crefunds%2Ccheckout_token%2Ccart_token%2Creferring_site%2Clanding_site%2Cdiscount_codes%2Cphone%2Ctotal_shipping_price_set%2Ctotal_line_items_price%2Cname%2Cbilling_address (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727b0ef70&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">365</span>, in paged_async
+    <span style="color: #008000; font-weight: bold">raise</span> ex
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">352</span>, in paged_async
+    response <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(url, headers<span style="color: #666666">=</span>headers, params<span style="color: #666666">=</span>params)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">75</span>, in get
+    <span style="color: #008000; font-weight: bold">return</span> request(<span style="color: #BA2121">&#39;get&#39;</span>, url, params<span style="color: #666666">=</span>params, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">60</span>, in request
+    <span style="color: #008000; font-weight: bold">return</span> session<span style="color: #666666">.</span>request(method<span style="color: #666666">=</span>method, url<span style="color: #666666">=</span>url, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">533</span>, in request
+    resp <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>send(prep, <span style="color: #666666">**</span>send_kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">646</span>, in send
+    r <span style="color: #666666">=</span> adapter<span style="color: #666666">.</span>send(request, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">516</span>, in send
+    <span style="color: #008000; font-weight: bold">raise</span> <span style="color: #D2413A; font-weight: bold">ConnectionError</span>(e, request<span style="color: #666666">=</span>request)
+<span style="color: #FF0000">requests.exceptions.ConnectionError</span>: HTTPSConnectionPool(host=&#39;https&#39;, port=443): Max retries exceeded with url: //www.jkcart.com//admin/api/2019-10/orders.json?status=any&amp;fulfillment_status=any&amp;limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T08%3A47%3A35.884796&amp;order=created_at+asc&amp;fields=id%2Cemail%2Cclosed_at%2Ccreated_at%2Cupdated_at%2Corder_number%2Ctotal_price%2Ctotal_tax%2Ctaxes_included%2Ctotal_discounts%2Cfulfillment_status%2Cfinancial_status%2Ccustomer%2Cshipping_address%2Ccurrency%2Cline_items%2Crefunds%2Ccheckout_token%2Ccart_token%2Creferring_site%2Clanding_site%2Cdiscount_codes%2Cphone%2Ctotal_shipping_price_set%2Ctotal_line_items_price%2Cname%2Cbilling_address (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727b0ef70&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (20, 9804, 'ProcessOrdersJob', '1970-01-01 00:00:00.000000', '2022-06-01 08:58:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (21, 9804, 'ProcessVariantsJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:08:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (22, 9804, 'ProcessCustomersJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:08:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (23, 9804, 'ProcessProductJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:13:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (24, 9804, 'ProcessStoreJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:13:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (25, 9804, 'ShopifyCustomerProxyWebhook', '1970-01-01 00:00:00.000000', '2022-06-01 09:13:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (26, 9804, 'AnalyzeRFMJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:18:49.790592', 360, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (19, 9804, 'FetchCheckoutsJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">159</span>, in _new_conn
+    conn <span style="color: #666666">=</span> connection<span style="color: #666666">.</span>create_connection(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/connection.py&quot;</span>, line <span style="color: #666666">57</span>, in create_connection
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, socket<span style="color: #666666">.</span>SOCK_STREAM):
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/socket.py&quot;</span>, line <span style="color: #666666">918</span>, in getaddrinfo
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> _socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, <span style="color: #008000">type</span>, proto, flags):
+<span style="color: #FF0000">socket.gaierror</span>: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">600</span>, in urlopen
+    httplib_response <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_make_request(conn, method, url,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">344</span>, in _make_request
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>_validate_conn(conn)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">843</span>, in _validate_conn
+    conn<span style="color: #666666">.</span>connect()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">316</span>, in connect
+    conn <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_new_conn()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">168</span>, in _new_conn
+    <span style="color: #008000; font-weight: bold">raise</span> NewConnectionError(
+<span style="color: #FF0000">urllib3.exceptions.NewConnectionError</span>: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727bbdc40&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">439</span>, in send
+    resp <span style="color: #666666">=</span> conn<span style="color: #666666">.</span>urlopen(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">640</span>, in urlopen
+    retries <span style="color: #666666">=</span> retries<span style="color: #666666">.</span>increment(method, url, error<span style="color: #666666">=</span>e, _pool<span style="color: #666666">=</span><span style="color: #008000">self</span>,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/retry.py&quot;</span>, line <span style="color: #666666">399</span>, in increment
+    <span style="color: #008000; font-weight: bold">raise</span> MaxRetryError(_pool, url, error <span style="color: #AA22FF; font-weight: bold">or</span> ResponseError(cause))
+<span style="color: #FF0000">urllib3.exceptions.MaxRetryError</span>: HTTPSConnectionPool(host=&#39;https&#39;, port=443): Max retries exceeded with url: //www.jkcart.com//admin/api/2019-10/checkouts.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T08%3A47%3A35.884796&amp;order=created_at+asc&amp;fields=id%2Cline_items%2Ctoken%2Ccart_token%2Cemail%2Cphone%2Ccustomer_id%2Cgateway%2Ccreated_at%2Cupdated_at%2Ccompleted_at%2Cclosed_at%2Clanding_site%2Cnote%2Creferring_site%2Ccurrency%2Cpresentment_currency%2Csource_identifier%2Csource_url%2Csource_name%2Ctotal_discounts%2Ctotal_line_items_price%2Ctotal_line_items_price%2Ctotal_price%2Ctotal_tax%2Cabandoned_checkout_url%2Cdiscount_codes_json%2Csource (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727bbdc40&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">365</span>, in paged_async
+    <span style="color: #008000; font-weight: bold">raise</span> ex
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">352</span>, in paged_async
+    response <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(url, headers<span style="color: #666666">=</span>headers, params<span style="color: #666666">=</span>params)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">75</span>, in get
+    <span style="color: #008000; font-weight: bold">return</span> request(<span style="color: #BA2121">&#39;get&#39;</span>, url, params<span style="color: #666666">=</span>params, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">60</span>, in request
+    <span style="color: #008000; font-weight: bold">return</span> session<span style="color: #666666">.</span>request(method<span style="color: #666666">=</span>method, url<span style="color: #666666">=</span>url, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">533</span>, in request
+    resp <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>send(prep, <span style="color: #666666">**</span>send_kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">646</span>, in send
+    r <span style="color: #666666">=</span> adapter<span style="color: #666666">.</span>send(request, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">516</span>, in send
+    <span style="color: #008000; font-weight: bold">raise</span> <span style="color: #D2413A; font-weight: bold">ConnectionError</span>(e, request<span style="color: #666666">=</span>request)
+<span style="color: #FF0000">requests.exceptions.ConnectionError</span>: HTTPSConnectionPool(host=&#39;https&#39;, port=443): Max retries exceeded with url: //www.jkcart.com//admin/api/2019-10/checkouts.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T08%3A47%3A35.884796&amp;order=created_at+asc&amp;fields=id%2Cline_items%2Ctoken%2Ccart_token%2Cemail%2Cphone%2Ccustomer_id%2Cgateway%2Ccreated_at%2Cupdated_at%2Ccompleted_at%2Cclosed_at%2Clanding_site%2Cnote%2Creferring_site%2Ccurrency%2Cpresentment_currency%2Csource_identifier%2Csource_url%2Csource_name%2Ctotal_discounts%2Ctotal_line_items_price%2Ctotal_line_items_price%2Ctotal_price%2Ctotal_tax%2Cabandoned_checkout_url%2Cdiscount_codes_json%2Csource (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727bbdc40&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (18, 9804, 'FetchProductsJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">159</span>, in _new_conn
+    conn <span style="color: #666666">=</span> connection<span style="color: #666666">.</span>create_connection(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/connection.py&quot;</span>, line <span style="color: #666666">57</span>, in create_connection
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, socket<span style="color: #666666">.</span>SOCK_STREAM):
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/socket.py&quot;</span>, line <span style="color: #666666">918</span>, in getaddrinfo
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> _socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, <span style="color: #008000">type</span>, proto, flags):
+<span style="color: #FF0000">socket.gaierror</span>: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">600</span>, in urlopen
+    httplib_response <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_make_request(conn, method, url,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">344</span>, in _make_request
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>_validate_conn(conn)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">843</span>, in _validate_conn
+    conn<span style="color: #666666">.</span>connect()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">316</span>, in connect
+    conn <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_new_conn()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">168</span>, in _new_conn
+    <span style="color: #008000; font-weight: bold">raise</span> NewConnectionError(
+<span style="color: #FF0000">urllib3.exceptions.NewConnectionError</span>: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727ba5700&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">439</span>, in send
+    resp <span style="color: #666666">=</span> conn<span style="color: #666666">.</span>urlopen(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">640</span>, in urlopen
+    retries <span style="color: #666666">=</span> retries<span style="color: #666666">.</span>increment(method, url, error<span style="color: #666666">=</span>e, _pool<span style="color: #666666">=</span><span style="color: #008000">self</span>,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/retry.py&quot;</span>, line <span style="color: #666666">399</span>, in increment
+    <span style="color: #008000; font-weight: bold">raise</span> MaxRetryError(_pool, url, error <span style="color: #AA22FF; font-weight: bold">or</span> ResponseError(cause))
+<span style="color: #FF0000">urllib3.exceptions.MaxRetryError</span>: HTTPSConnectionPool(host=&#39;https&#39;, port=443): Max retries exceeded with url: //www.jkcart.com//admin/api/2019-10/products.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T08%3A47%3A35.884796&amp;order=created_at+asc&amp;fields=id%2Ctitle%2Cbody_html%2Cvendor%2Cproduct_type%2Ccreated_at%2Chandle%2Cupdated_at%2Cpublished_at%2Ctaxes_included%2Cimage%2Cvariants%2Ctags (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727ba5700&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">365</span>, in paged_async
+    <span style="color: #008000; font-weight: bold">raise</span> ex
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">352</span>, in paged_async
+    response <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(url, headers<span style="color: #666666">=</span>headers, params<span style="color: #666666">=</span>params)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">75</span>, in get
+    <span style="color: #008000; font-weight: bold">return</span> request(<span style="color: #BA2121">&#39;get&#39;</span>, url, params<span style="color: #666666">=</span>params, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">60</span>, in request
+    <span style="color: #008000; font-weight: bold">return</span> session<span style="color: #666666">.</span>request(method<span style="color: #666666">=</span>method, url<span style="color: #666666">=</span>url, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">533</span>, in request
+    resp <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>send(prep, <span style="color: #666666">**</span>send_kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">646</span>, in send
+    r <span style="color: #666666">=</span> adapter<span style="color: #666666">.</span>send(request, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">516</span>, in send
+    <span style="color: #008000; font-weight: bold">raise</span> <span style="color: #D2413A; font-weight: bold">ConnectionError</span>(e, request<span style="color: #666666">=</span>request)
+<span style="color: #FF0000">requests.exceptions.ConnectionError</span>: HTTPSConnectionPool(host=&#39;https&#39;, port=443): Max retries exceeded with url: //www.jkcart.com//admin/api/2019-10/products.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T08%3A47%3A35.884796&amp;order=created_at+asc&amp;fields=id%2Ctitle%2Cbody_html%2Cvendor%2Cproduct_type%2Ccreated_at%2Chandle%2Cupdated_at%2Cpublished_at%2Ctaxes_included%2Cimage%2Cvariants%2Ctags (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727ba5700&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (15, 9804, 'FetchGaTransactionJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:18:49.790592', 180, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (17, 9804, 'FetchCustomersJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">159</span>, in _new_conn
+    conn <span style="color: #666666">=</span> connection<span style="color: #666666">.</span>create_connection(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/connection.py&quot;</span>, line <span style="color: #666666">57</span>, in create_connection
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, socket<span style="color: #666666">.</span>SOCK_STREAM):
+  File <span style="color: #008000">&quot;/usr/lib/python3.8/socket.py&quot;</span>, line <span style="color: #666666">918</span>, in getaddrinfo
+    <span style="color: #008000; font-weight: bold">for</span> res <span style="color: #AA22FF; font-weight: bold">in</span> _socket<span style="color: #666666">.</span>getaddrinfo(host, port, family, <span style="color: #008000">type</span>, proto, flags):
+<span style="color: #FF0000">socket.gaierror</span>: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">600</span>, in urlopen
+    httplib_response <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_make_request(conn, method, url,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">344</span>, in _make_request
+    <span style="color: #008000">self</span><span style="color: #666666">.</span>_validate_conn(conn)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">843</span>, in _validate_conn
+    conn<span style="color: #666666">.</span>connect()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">316</span>, in connect
+    conn <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>_new_conn()
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connection.py&quot;</span>, line <span style="color: #666666">168</span>, in _new_conn
+    <span style="color: #008000; font-weight: bold">raise</span> NewConnectionError(
+<span style="color: #FF0000">urllib3.exceptions.NewConnectionError</span>: &lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727b957f0&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">439</span>, in send
+    resp <span style="color: #666666">=</span> conn<span style="color: #666666">.</span>urlopen(
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/connectionpool.py&quot;</span>, line <span style="color: #666666">640</span>, in urlopen
+    retries <span style="color: #666666">=</span> retries<span style="color: #666666">.</span>increment(method, url, error<span style="color: #666666">=</span>e, _pool<span style="color: #666666">=</span><span style="color: #008000">self</span>,
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/urllib3/util/retry.py&quot;</span>, line <span style="color: #666666">399</span>, in increment
+    <span style="color: #008000; font-weight: bold">raise</span> MaxRetryError(_pool, url, error <span style="color: #AA22FF; font-weight: bold">or</span> ResponseError(cause))
+<span style="color: #FF0000">urllib3.exceptions.MaxRetryError</span>: HTTPSConnectionPool(host=&#39;https&#39;, port=443): Max retries exceeded with url: //www.jkcart.com//admin/api/2019-10/customers.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T08%3A47%3A35.884796&amp;order=created_at+asc&amp;fields=id%2Ccreated_at%2Cupdated_at%2Cstate%2Cemail%2Cfirst_name%2Clast_name%2Clast_order_id%2Cdefault_address%2Ctax_exempt%2Cphone%2Caccepts_marketing (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727b957f0&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+
+<span style="color: #0044DD">During handling of the above exception, another exception occurred:</span>
+
+<span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">365</span>, in paged_async
+    <span style="color: #008000; font-weight: bold">raise</span> ex
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">352</span>, in paged_async
+    response <span style="color: #666666">=</span> requests<span style="color: #666666">.</span>get(url, headers<span style="color: #666666">=</span>headers, params<span style="color: #666666">=</span>params)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">75</span>, in get
+    <span style="color: #008000; font-weight: bold">return</span> request(<span style="color: #BA2121">&#39;get&#39;</span>, url, params<span style="color: #666666">=</span>params, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/api.py&quot;</span>, line <span style="color: #666666">60</span>, in request
+    <span style="color: #008000; font-weight: bold">return</span> session<span style="color: #666666">.</span>request(method<span style="color: #666666">=</span>method, url<span style="color: #666666">=</span>url, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">533</span>, in request
+    resp <span style="color: #666666">=</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>send(prep, <span style="color: #666666">**</span>send_kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/sessions.py&quot;</span>, line <span style="color: #666666">646</span>, in send
+    r <span style="color: #666666">=</span> adapter<span style="color: #666666">.</span>send(request, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/requests/adapters.py&quot;</span>, line <span style="color: #666666">516</span>, in send
+    <span style="color: #008000; font-weight: bold">raise</span> <span style="color: #D2413A; font-weight: bold">ConnectionError</span>(e, request<span style="color: #666666">=</span>request)
+<span style="color: #FF0000">requests.exceptions.ConnectionError</span>: HTTPSConnectionPool(host=&#39;https&#39;, port=443): Max retries exceeded with url: //www.jkcart.com//admin/api/2019-10/customers.json?limit=250&amp;updated_at_min=1970-01-01T00%3A00%3A00&amp;updated_at_max=2022-06-01T08%3A47%3A35.884796&amp;order=created_at+asc&amp;fields=id%2Ccreated_at%2Cupdated_at%2Cstate%2Cemail%2Cfirst_name%2Clast_name%2Clast_order_id%2Cdefault_address%2Ctax_exempt%2Cphone%2Caccepts_marketing (Caused by NewConnectionError(&#39;&lt;urllib3.connection.VerifiedHTTPSConnection object at 0x7f8727b957f0&gt;: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution&#39;))
+</pre></div>
+');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (38, 1067100, 'FetchCustomersJobMagento2x', '2022-01-13 11:42:33.741000', '2022-01-13 11:42:33.741000', 15, '2022-01-13 11:42:33.741000', 'ERROR', 1, '<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #0044DD">Traceback (most recent call last):</span>
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/managed_job.py&quot;</span>, line <span style="color: #666666">247</span>, in __call__
+    <span style="color: #008000">super</span>(ScheduledCeleryTask, <span style="color: #008000">self</span>)<span style="color: #666666">.</span><span style="color: #0000FF">__call__</span>(job, <span style="color: #666666">*</span>tail_args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/env/lib/python3.8/site-packages/celery/app/trace.py&quot;</span>, line <span style="color: #666666">650</span>, in __protected_call__
+    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">self</span><span style="color: #666666">.</span>run(<span style="color: #666666">*</span>args, <span style="color: #666666">**</span>kwargs)
+  File <span style="color: #008000">&quot;/home/kakashi-hatake/Code/stocker/analytics/jobs/magento2x/magento2x_api_mixin.py&quot;</span>, line <span style="color: #666666">85</span>, in paged_async_magento2x
+    <span style="color: #008000; font-weight: bold">raise</span> QueryParamsNotRespected(f<span style="color: #BA2121">&quot;requested page_size is </span><span style="color: #BB6688; font-weight: bold">{params[&#39;page_size&#39;]}</span><span style="color: #BA2121">, but {len(resource_response)} received&quot;</span>)
+<span style="color: #FF0000">analytics.jobs.magento2x.magento2x_api_mixin.QueryParamsNotRespected</span>: requested page_size is 150, but 13166 received
+</pre></div>
+');

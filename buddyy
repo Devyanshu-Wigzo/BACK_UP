@@ -1,0 +1,469 @@
+17-05
+1. Custom csv mapped locally and given to atif for cloud upload of JKart.
+2. Sample csv collected and preparing for custom upload platform with mandatory firlds and variable type.
+3. Given stocker KT to Faizan ahmad
+4. Ticket (1228) solved 
+   Verifying keys and api callled in app.wigzo.com of Customer table, Product table, Order table, from our database POSTGRESQL (Order -> Add filter all fields verification).
+
+   Found three mismatches. 
+   last_sms_clicked -> last_sms_click
+   last_email_clicked -> last_email_click
+   last_sms_sent -> last_email_sent 
+
+5. Tried Magento nginx.conf file error to resolve.
+   
+------------------------------------------------------------------------------------------
+18-05
+1. Sample csv prepared and submitting to saad junaidi.
+2. Custom csv upload of jkcart (in progress).
+3. Magento local setup error handling.
+
+------------------------------------------------------------------------------------------
+23-05
+1. Documentation on Queries used in segmentation in stocker.
+2. Received KT of software stack from Faizan ahmad and about frontend.
+
+------------------------------------------------------------------------------------------
+
+24-05
+1. 1. KT with @Faizan Ahmad on panel, code deployment 9000, git use, release process. 
+2. Documentation on queries on Segmentation in app.wigo.com and stocker. 
+3. JKCART CSV mapping and error resolved with atif. Shared all mapped CSV files which he will upload in stocker.
+
+------------------------------------------------------------------------------------------
+
+30-05
+1. jk cart csv upload to production.
+2. Job explanation call reshedule to 31-05.
+3. Client side error on org_id = 10871 
+   showing error on their server side.
+3.1. Call with the client @5:00 with navyas fashion client (org_id=10871).
+
+4. Requested stocker repo access to atyab sir.
+5. Buddy file restore. 
+
+-----------------------------------------------------------------------------------------==
+
+02-06
+
+1. Product demo given to najrul and asad
+
+--------------------------------------------------------------------------------------------
+
+07-06 
+1. aiscs data to be uploaded but the csv is very distorted and need to be resend by client.
+2. Bug no. 25 from bug list.
+   product catalog is not loading showing 502 froom stocker side.
+
+   sol:-
+   we have to see the alternative of ILIKE which we are using in our stocker query in 
+   prodyct.py (query).
+3. Exporting curtom segmented data from production database into csv of custom client.
+
+   Query :- select * from segment cache where segemnt id = 1233 and org id = 1234
+
+-------------------------------------------------------------------------------------------
+
+08-06
+1. Here's my EOD for today
+1. Debugging and solving the download csv api call issue on downloading customerscsv.
+2. KT on GCP by aayushman and atif. 
+Pending task :-
+1. Product catalog issue on bug list number :- 25. Need to have a brief discussion on the solution with atif and ankit sir. 
+2. creating order downloadcsv api. First I need to verify whether the api exists or not. 
+ 
+-------------------------------------------------------------------------------------------
+
+09-06
+
+1. Tried uploading any data on my local machine getting error on jkart data.
+For csv uploading on gcp i have created an account on gcp so that for any custom data i dont have to go to atif or Ayushman i can upload locally through it.
+
+2.  Also tried running scheduler run on local machine the credentials of snitch which i have received from Atif earlier got expired will retry tomorrow.
+
+Task for tomorrow:-
+1. Product catalog issue debugging.
+2. Need a kt on gcp from aayushman.
+-----------------------------------------------------------------------------------------------
+
+10-06
+
+1. Product catalog query 
+
+-----------------------------------------------------------------------------------------------
+
+13-06
+ 
+1. Assign a ticket (1476) to asad regarding customer csv exporting.
+2. Tested magento_bugfix by atif.
+3. Made iceman.wigzo.com live with aayushman.
+4. locally imported data on stocker
+5. Realease send of stocker and wigzo wth atif and aayushmna @12:30am
+
+-----------------------------------------------------------------------------------------------
+
+14.06
+
+1. jobs-rerun of mganeto clients
+   Re-run last run at --> 1970
+   1. 10671 --> Done 
+   (OK tested)
+
+   2. 8640  --> jobs create  
+
+   3.  9737 --> Done (in waiting state)
+
+   4. 10262 --> Done 
+
+   5. 10871 --> Done 
+
+   6. 8844 --> does not exist in store(integration not done) 
+
+2. Client query call with apex footwear regarding custom csv uploads
+   Apex footwear csv data issue
+
+   1. Customer Csv
+   
+   1. customer_id is missing
+   2. First name and last name should be in spereate format
+
+   2. order_item
+
+   1. line_item_id is missing
+
+   3. Orders
+
+   1. customer_id is missing 
+   2. Created_at format is unknown
+   3. order_id is missing 
+
+   4. Products 
+   
+   1. title and image is missing if afterwards in the the broadcast the client will search for the product no image no titile nothing will be shown.
+   
+5. refund_item
+
+   1. refund_line_item id is missing. 
+
+
+* All the files should be seperate and will be in proper csv format. 
+3. growth site live in process all sites available on sites-blogs goes down
+   sol : took backup and pointed it somewhere else
+
+4. Realease process of wigzo @11:30 with atif and ayushman
+
+-------------------------------------------------------------------------------------------
+
+21-06
+
+1. magento cart setup (in progress)
+requirement a dns and a instance from aayushman 
+
+
+succesfully setup the cart and pointed it to magento.wigzoapp.com
+
+-------------------------------------------------------------------------------------------
+
+22-06  
+
+1. Prepared a documentation on magento cart creation for future refrence 
+
+2. Gtm integration kt with abhishek sarkar 5:00-5:30
+
+3. Done gtm integration of byshree client. and handed over to abhishek by 12:30 AM 
+
+-------------------------------------------------------------------------------------------
+
+04-07
+
+1. Custom csv upload on org_id = 10747.
+2. Intellij idea cracked version setup 
+3. stocker database connected to production.
+
+-------------------------------------------------------------------------------------------
+
+
+05-07
+
+1. Custom CSV upload on org_id 10747 
+2. Kt Given to vishal on product
+3. GTM integration of bumchum 
+4. stocker setup on new instance 
+------------------------------------------------------------------------------------------
+
+
+06-07 
+
+1. Kt given to vishal.
+2. Sanity of ENAMOR csv data is being done and replied in the thread.
+
+   1. Order List 
+
+   1. Customer_id is missing therefore will create in making segments.
+   2. Zip contains alphabets we take only integer value 
+   3. Phone number are distorted 
+
+
+   2. order_item 
+
+   1. line_item_id, Product_id, variant_id contains alphabets but we only take integers as value. 
+   2. Customer_id is missing. 
+
+
+   3. Customers 
+   1. The customer id should match with order to create further segments. 
+   2. zip should have integer value. 
+
+
+   4. Product  
+
+   1. product_id should not have alphbets as we take only integer as value and the product id should match in order_item.
+
+
+3. solution for enamor csv is that we have to map all missing cuustomer id with phonee number 
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+07-07
+
+1. Nasher_miles Csv uploaded 
+2. 
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+08-07
+
+1. v2kart data sanity,
+    Sanity is taking time as the data is in Lakhs. I am still working on it.
+2. APex issue discussed with shobhit and asked him to resend the apex data with correct format
+
+3. stocker KT with vishal is still pending 
+4. coordinated with anubha and fasial for ticket 1630, 1638 respectively for csv uploads. 
+5. another csv from saad bhai is in queue as i first need to do v2kart. 
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+11-07
+
+1. v2kart customer and order data uploaded on production.
+2. 2 calls attended with Ankit sir explaining GCP and other things related to devoops to Vishal.
+    One was from 3:00 to 4:00 pm and another was from 6:00 to 8:00 pm
+3. Short client call along with faisal explaining the sanity issue in csv of SAANA ticket no. 1638
+
+----------------------------------------------------------------------------------------------------------------------
+
+12-07
+
+1. v2kart data is being uploaded.
+2. mock drill on gcp creating a snapshot and backup.
+3. tried updating navya's fashion order will update today along with devesh.
+
+----------------------------------------------------------------------------------------------------------------------
+
+14-07
+
+1. Terraform study 
+2. Requested repository access from atyab sir.
+3. Store created and job run of v2kart org_id 11066
+4. KT on store creation and job run from devesh.
+5. Initialized wigzo_2.0 prod database locally.
+
+--------------------------------------------------------------------------------------------------------------
+
+1. Custom csv upload on org_id = 10747.
+2. Intellij idea cracked version setup
+3. stocker database connected to production.
+
+-------------------------------------------------------------------------------------------
+
+
+05-07
+
+1. Custom CSV upload on org_id 10747
+2. Kt Given to vishal on product
+3. GTM integration of bumchum
+4. stocker setup on new instance
+------------------------------------------------------------------------------------------
+
+
+06-07
+
+1. Kt given to vishal.
+2. Sanity of ENAMOR csv data is being done and replied in the thread.
+
+   1. Order List
+
+   1. Customer_id is missing therefore will create in making segments.
+   2. Zip contains alphabets we take only integer value
+   3. Phone number are distorted
+
+
+   2. order_item
+
+   1. line_item_id, Product_id, variant_id contains alphabets but we only take integers as value.
+   2. Customer_id is missing.
+
+
+   3. Customers
+   1. The customer id should match with order to create further segments.
+   2. zip should have integer value.
+
+
+   4. Product  
+
+   1. product_id should not have alphbets as we take only integer as value and the product id should match in order_item.
+
+
+3. solution for enamor csv is that we have to map all missing cuustomer id with phonee number
+
+
+----------------------------------------------------------------------------------------------------------------------
+
+07-07
+
+1. Nasher_miles Csv uploaded
+2.
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+08-07
+
+1. v2kart data sanity,
+    Sanity is taking time as the data is in Lakhs. I am still working on it.
+2. APex issue discussed with shobhit and asked him to resend the apex data with correct format
+
+3. stocker KT with vishal is still pending
+4. coordinated with anubha and fasial for ticket 1630, 1638 respectively for csv uploads.
+5. another csv from saad bhai is in queue as i first need to do v2kart.
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+11-07
+
+1. v2kart customer and order data uploaded on production.
+2. 2 calls attended with Ankit sir explaining GCP and other things related to devoops to Vishal.
+    One was from 3:00 to 4:00 pm and another was from 6:00 to 8:00 pm
+3. Short client call along with faisal explaining the sanity issue in csv of SAANA ticket no. 1638
+
+----------------------------------------------------------------------------------------------------------------------
+
+12-07
+
+1. v2kart data is being uploaded.
+2. mock drill on gcp creating a snapshot and backup.
+3. tried updating navya's fashion order will update today along with devesh.
+
+----------------------------------------------------------------------------------------------------------------------
+
+14-07
+
+1. Terraform study
+2. Requested repository access from atyab sir.
+3. Store created and job run of v2kart org_id 11066
+4. KT on store creation and job run from devesh.
+5. Initialized wigzo_2.0 prod database locally.
+
+--------------------------------------------------------------------------------------------------------------
+
+1. Sanity of data of refresh client.
+2. Python code for converting alphabet columns to integers.
+3. Sanana data sanity.
+
+---------------------------------------------------------------------------------------------------------------
+KT taken from ankit sir on documentation preparation and Wigzo infrastructure  
+2. stocker code study.
+3. New table created of product_map.
+
+------------------------------------------------------------------------------------------------------------
+
+Here's my eod for today
+
+1. Refresh data sanity and report given to faisal.
+2. New brandsthattext wordpress site setup as older one was compromised.
+3. Helped asad in importing data to his local stocker.
+4. Searched first order and last order received of APEX.
+
+-----------------------------------------------------------------------------------------------------------------
+1.Navyas fashion order update.
+2. Kt from aayushman regarding Cassandra downtime which happened today and how to make it live.
+3. CSV upload of REFRESH.
+------------------------------------------------------------------------------------------------------------------
+
+ApexOrder data uploaded.
+2. Navyas Fashion order updated.
+
+-------------------------------------------------------------------------------------------------------------------
+
+1. Data sanity report resend of Asics.
+2. Cassandra R/D
+3. Stocker release sent along with devesh.
+4. Database set-up of stocker and wigzo.
+5. Apex data timeline checked and reported to saad bhai.
+
+------------------------------------------------------------------------------------------------------------------
+
+Here's my eod
+1. Tracker.wigzo pods failure.
+    Description:- The pods of tracker.wigzo are restarting themselves, Root cause is still unknown.
+    Resource time:- I had a call with Ankit sir, Aayushman, Vishal, Atyab sir, Saad sir. 
+    Resolution time :- we are still working on this problem and exploring every aspect of the problem.
+
+2. Ticket no. 1679 
+    Description:- The csv which REFRESH has provided us combinely contain order data and order_item data. 
+    Resource time:- Had a call with Devesh about what we have to do. 
+    Resolution time:- we will try to give the solution on coming Monday i.e 1-Aug.
+
+3. Stocker setup of Mansi and Apoorv 
+    Description:- Mansi and Apoorv both require stocker setup for product queries. 
+    Resolution Time:- Today i.e 29-July.
+
+------------------------------------------------------------------------------------------------------------------------------
+
+01-08
+1679 Sanity issue report send Resolved Medium 02-07 csv upload in database
+1809 Sanity issue report send Resolved Medium 02-07 csv upload in database
+realease to be send of product catalog error Product catalog error 502 pending high 01-08(Mid-night)
+
+02-08
+realease to be send of product catalog error Product catalog error 502 pending high 02-08(Mid-night)
+1809 CSV upload Resolved High 02-05 csv upload custom platform
+Daily_object csv upload Debugging the error and csv upload of Pending High 03-05
+
+03-08
+pending csv upload pending csv uploaded of refresh
+Revenue count issue with refresh Revnue count of Refresh was showing 0 Resolved High 03-05
+Sanity issue discussion with shilpa Daily object product image url was too long too upload descussed it with shilpa and shared correct image url Resolved high 03-05
+Custom analytic integration Refresh custom analytics integration done Resolved High 03-05
+Sanity issue report shared with faisal Customer csv having some special characters shared with faisal
+
+04-08
+Client call with asics Sanity issue client call with asics Resolved High
+Customer csv upload refresh Ticket 1679 Closed Resolved
+1858 Custom segment not working as store was not registered. Resolve high      
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+09-08                                                                         
+Daily object data uploaded                                                                            
+1879 ticket no. solved                                                                          
+created store and ran jobs of daily objects                                                                          
+                                                                           
+                                                                           
+--------------------------------------------------------------------------------------------------------------------------------
+
+10-08
+
+1. Daily object sanity report 
+2. VegNonveg job custom integration 
+3. Daily object custom integration and store registered and job run 
+4. vegnonveg job and store creation
+
+ 

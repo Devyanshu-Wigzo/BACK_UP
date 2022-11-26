@@ -1,0 +1,456 @@
+Apex footwear mapping 
+1. Customer
+
+localhost:5000/analytics/org/8168/ingestion/persist	
+
+
+customer_id	email	first_name	last_name	created_at	updated_at	postal_code	city	state	country	phone
+
+
+
+
+customer_id*	email	first_name	last_name	created_at	updated_at	is_processed	first_order_at	last_order_at	first_order_id	last_order_id	relationship_length	   status*	orders	refunds	discounts*	discounts_qty	abandoned_carts	revenue*	tags	average_order_value*	cost_of_goods_sold*	gross_profit*	gross_margin*	abandoned_cart_amount*	postal_code	city	state	country_code	phone	lapse_point*	is_favourite*	is_guest	data_source*	
+
+
+{ 
+"model": "customers",
+"file_name":"customers",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/apex/mapped/customers.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[ 
+{
+"key":"customer_id",
+"mapped": "customer_id"},
+{"key":"email",
+"mapped": "email"}, 
+{"key":"first_name",
+"mapped":"firs_tname"},
+{"key":"last_name",
+"mapped":"last_name"},
+{"key":"created_at",
+"mapped":"created_at"},
+{"key":"updated_at",
+"mapped":"updated_at"},
+{"key":"postal_code",
+"mapped":"postal_code"},
+{"key":"city",
+"mapped":"city"},
+{"key":"state",
+"mapped":"state"},
+{"key":"country",
+"mapped":"country"},
+{"key":"status",
+"mapped":"status"},
+{"key":"discounts",
+"mapped":"discounts"},
+{"key":"revenue",
+"mapped":"revenue"},
+{"key":"average_order_value",
+"mapped":"average_order_value"},
+{"key":"cost_of_goods_sold",
+"mapped":"cost_of_goods_sold"},
+{"key":"gross_profit",
+"mapped":"gross_profit"},
+{"key":"abandoned_cart_amount",
+"mapped":"abandoned_cart_amount"},
+{"key":"lapse_point",
+"mapped":"lapse_point"},
+{"key":"phone",
+"mapped":"phone"},
+{"key":"is_favourite",
+"mapped":"is_favourite"},
+{"key":"data_source",
+"mapped":"data_source"}
+
+] 
+}
+
+
+
+
+2. Product Mapping 
+created_at	product_id	title	vendor	product_type	tags	manufacturer	variant_id	variant_title	sku	image	inventory_quantity	price	recorded_cost
+is_processed revenue", gross_profit gross_margin , amount_refunded, percent_refunded", cost_of_goods_sold data_source",
+
+created_at	product_id	title	vendor	product_type	tags	manufacturer	sku	image	price	recorded_cost	is_processed	revenue	gross_profit	gross_margin	amount_refunded	percent_refunded	cost_of_goods_sold	data_source	total_orders_refunded	total_orders	quantity_sold	quantity_refunded
+
+localhost:5000/analytics/org/8168/ingestion/persist	
+{
+    "model": "products", 
+    "file_name": "product1.csv", 
+    "csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/apex/product1.csv", 
+    "webhook_url": "http://localhost:5000/analytics/stocker/webhook",
+    "mapped_headers": [
+  {
+    "key": "created_at",
+    "mapped": "created_at"
+  },
+  {
+    "key": "product_id",
+    "mapped": "product_id"
+  },
+  {
+    "key": "title",
+    "mapped": "title"
+  },
+  {
+    "key": "vendor",
+    "mapped": "vendor"
+  },
+  {
+    "key": "product_type",
+    "mapped": "product_type"
+  },
+  {
+    "key": "image",
+    "mapped": "image"
+  },
+  {
+    "key": "tags",
+    "mapped": "tags"
+  },
+  {
+    "key": "manufacturer",
+    "mapped": "manufacturer"
+  },
+  {
+    "key": "sku",
+    "mapped": "sku"
+  },
+  {
+    "key": "price",
+    "mapped": "price"
+  },
+  {
+    "key": "recorded_cost",
+    "mapped": "recorded_cost"
+  },
+  {
+    "key": "amount_refunded",
+    "mapped": "amount_refunded"
+  },
+  {
+    "key": "cost_of_goods_sold",
+    "mapped": "cost_of_goods_sold"
+  },
+  {
+    "key": "gross_margin",
+    "mapped": "gross_margin"
+  },
+  {
+    "key": "gross_profit",
+    "mapped": "gross_profit"
+  },
+  {
+    "key": "is_processed",
+    "mapped": "is_processed"
+  },
+  {
+    "key": "percent_refunded",
+    "mapped": "percent_refunded"
+  },
+  {
+    "key": "quantity_refunded",
+    "mapped": "quantity_refunded"
+  },
+  {
+    "key": "quantity_sold",
+    "mapped": "quantity_sold"
+  },
+  {
+    "key": "revenue",
+    "mapped": "revenue"
+  },
+  {
+    "key": "total_orders",
+    "mapped": "total_orders"
+  },
+  {
+    "key": "total_orders_refunded",
+    "mapped": "total_orders_refunded"
+  },
+  {
+    "key": "data_source",
+    "mapped": "data_source"
+  }
+]
+}
+{ 
+"model": "products",
+"file_name":"Products",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/apex/mapped/Products.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[ 
+{
+"key":"product_id",
+"mapped": "product_id"},
+{"key":"created_at",
+"mapped": "created_at"},
+{"key":"title",
+"mapped": "title"}, 
+{"key":"vendor",
+"mapped":"vendor"},
+{"key":"product_type",
+"mapped":"product_type"},
+{"key":"image",
+"mapped":"image"},
+{"key":"tags",
+"mapped":"tags"},
+{"key":"manufacturer",
+"mapped":"manufacturer"},
+{"key":"variant_id",
+"mapped":"variant_id"},
+{"key":"variant_title",
+"mapped":"variant_title"},
+{"key":"sku",
+"mapped":"sku"},
+{"key":"inventory_quantity",
+"mapped":"inventory_quantity"},
+{"key":"price",
+"mapped":"price"},
+{"key":"recorded_cost",
+"mapped":"recorded_cost"},
+{"key":"is_processed",
+"mapped":"is_processed"},
+{"key":"revenue",
+"mapped":"revenue"},
+{"key":"gross_profit",
+"mapped":"gross_profit"},
+{"key":"gross_margin",
+"mapped":"gross_margin"},
+{"key":"amount_refunded",
+"mapped":"amount_refunded"},
+{"key":"percent_refunded",
+"mapped":"percent_refunded"},
+{"key":"cost_of_goods_sold",
+"mapped":"cost_of_goods_sold"},
+{"key":"data_source",
+"mapped":"data_source"}
+] 
+}
+
+
+
+
+3. Orders 
+
+order_id  order_number  customer_id created_at  updated_at  cancelled_at  email city  state country zip currency  financial_status  fulfillment_status  total_price total_tax shipping_cost phone total_discounts
+{ 
+"model": "orders",
+"file_name":"Orders_2507.csv",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/apex/Orders_2507.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[ 
+{
+"key":"customer_id",
+"mapped": "customer_id"},
+{"key":"email",
+"mapped": "email"}, 
+{"key":"cancelled_at",
+"mapped": "cancelled_at"},    
+{"key":"order_id",
+"mapped":"order_id"},
+{"key":"order_number",
+"mapped":"order_number"},
+{"key":"created_at",
+"mapped":"created_at"},
+{"key":"updated_at",
+"mapped":"updated_at"},
+{"key":"zip",
+"mapped":"zip"},
+{"key":"city",
+"mapped":"city"},
+{"key":"state",
+"mapped":"state"},
+{"key":"country",
+"mapped":"country"},
+{"key":"currency",
+"mapped":"currency"},
+{"key":"financial_status",
+"mapped":"financial_status"},
+{"key":"fulfillment_status",
+"mapped":"fulfillment_status"},
+{"key":"total_price",
+"mapped":"total_price"},
+{"key":"total_tax",
+"map_ped":"total_tax"},
+{"key":"shipping_cost",
+"map_ped":"shipping_cost"},
+{"key":"total_discounts",
+"mapped":"total_discounts"},
+{"key":"phone",
+"mapped":"phone"},
+{"key":"data_source",
+"mapped":"data_source"}
+
+] 
+}
+
+
+
+
+4. Order_item 
+
+order_id	line_item_id	variant_id	product_id	customer_id	quantity	refunded	refunded_quantity	price	selling_price	cost_of_goods_sold	total_discount_amount	fulfillment_status	financial_status
+
+{ 
+"model": "order_itens",
+"file_name":"Order_item1",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/apex/mapped/Order_Item1.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[ 
+{
+"key":"product_id",
+"mapped": "product_id"},
+{"key":"order_id",
+"mapped": "order_id"},
+{"key":"line_item_id",
+"mapped": "line_item_id"}, 
+{"key":"customer_id",
+"mapped":"customer_id"},
+{"key":"quantity",
+"mapped":"quantity"},
+{"key":"refunded",
+"mapped":"refunded"},
+{"key":"refunded_quantity",
+"mapped":"refunded_quantity"},
+{"key":"selling_price",
+"mapped":"selling_price"},
+{"key":"variant_id",
+"mapped":"variant_id"},
+{"key":"cost_of_goods_sold",
+"mapped":"cost_of_goods_sold"},
+{"key":"total_discount_amount",
+"mapped":"total_discount_amount"},
+{"key":"fulfillment_status",
+"mapped":"fulfillment_status"},
+{"key":"financial_status",
+"mapped":"financial_status"},
+{"key":"price",
+"mapped":"price"}
+] 
+}
+
+
+
+
+
+5. Refund_item
+
+refund_line_item_id	line_item_id	refund_id	order_id	variant_id	product_id	quantity	restock_type	subtotal
+
+id', BigInteger
+org_id", BigInt
+ake refund_line_item_id
+refund_line_item_id", B
+customer_id", BigIntege
+email', String(512)),
+line_item_id", BigInteg
+refund_id", BigInteger,
+order_id", BigInteger, 
+variant_id", BigInteger
+product_id", BigInteger
+quantity', Integer, nul
+restock_type', String(5
+subtotal', DECIMAL(), d
+data_source", String(51
+ingestion_id", Integer,
+
+
+refund_line_item_id	line_item_id	refund_id	order_id	variant_id	product_id	quantity	restock_type	subtotal	data_source	id	ingestion_id	customer_id	org_id
+
+{ 
+"model": "refund_itens",
+"file_name":"Refund_Item1",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/apex/new/Refund_Items1.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[
+{
+"key":"id",
+"mapped": "id"},
+{
+"key":"ingestion_id",
+"mapped": "ingestion_id"},
+{
+	"key":"data_source",
+	"mapped":"data_source"
+},
+{
+"key":"customer_id",
+"mapped": "customer_id"},
+{
+"key":"org_id",
+"mapped": "org_id"}, 
+{
+"key":"refund_line_item_id",
+"mapped": "refund_line_item_id"},
+{"key":"line_item_id",
+"mapped": "line_item_id"},
+{"key":"refund_id",
+"mapped": "refund_id"}, 
+{"key":"order_id",
+"mapped":"order_id"},
+{"key":"quantity",
+"mapped":"quantity"},
+{"key":"variant_id",
+"mapped":"variant_id"},
+{"key":"product_id",
+"mapped":"product_id"},
+{"key":"restock_type",
+"mapped":"restock_type"},
+{"key":"subtotal",
+"mapped":"subtotal"}
+]
+}
+
+
+
+
+
+https://storage.googleapis.com/media.wigzo.com/dev_uploads/apex/new/Refund_Items10753.csv
+refund_line_item_id	line_item_id	refund_id	order_id	variant_id	product_id	quantity	restock_type	subtotal	data_source	org_id
+
+
+{ 
+"model": "refund_items",
+"file_name":"Refund_Items10753",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/apex/new/Refund_Items10753.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[
+{
+	"key":"data_source",
+	"mapped":"data_source"
+},
+{
+"key":"customer_id",
+"mapped": "customer_id"},
+{
+"key":"org_id",
+"mapped": "org_id"}, 
+{
+"key":"refund_line_item_id",
+"mapped": "refund_line_item_id"},
+{"key":"line_item_id",
+"mapped": "line_item_id"},
+{"key":"refund_id",
+"mapped": "refund_id"}, 
+{"key":"order_id",
+"mapped":"order_id"},
+{"key":"quantity",
+"mapped":"quantity"},
+{"key":"variant_id",
+"mapped":"variant_id"},
+{"key":"product_id",
+"mapped":"product_id"},
+{"key":"restock_type",
+"mapped":"restock_type"},
+{"key":"subtotal",
+"mapped":"subtotal"}
+]
+}

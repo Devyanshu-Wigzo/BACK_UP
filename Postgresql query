@@ -1,0 +1,45 @@
+Postgresql query 
+
+select * from broadcast_campaign bc where scheduled_date_time between '2022-10-10 00:00:00.000' and '2022-10-10 23:59:00.000'  
+
+
+select * from mapped_user mu where mapping_time between '2022-08-01 00:00:00' and '2022-08-31 23:59:00' and org_id = 10605
+
+
+select count(id) from customer c where org_id = 10410 and customer_id in (select customer_id from "order" o where is_processed = true and org_id = 10410)
+
+
+select count(*) from customer c where org_id = 10410 and data_source = 'wigzo';
+
+
+
+select * from customer c where org_id = 10410 and customer_id < 619421; 
+
+select count(*) from "order" o where org_id = 10410 and phone <> '';
+
+
+delete from customer where org_id = 10410;
+
+
+
+
+select * from customer c where org_id = 11776 and rfm_segment = 'at_risk';
+
+
+
+select * from customer c where org_id = 11776 and created_at between '2022-09-01' and '2022-10-01' and orders = '1';
+
+
+For Null column
+select count(*) from mapped_user mu where org_id = 8376 and phone <> '';  
+
+
+
+
+
+
+
+
+
+
+

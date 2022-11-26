@@ -1,0 +1,152 @@
+customer_id	email	first_name	last_name	created_at	updated_at	postal_code	city	state	country	phone
+
+
+
+customer
+
+{ 
+"model": "customers",
+"file_name":"v2kart_analytics_customers",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/v2kart/v2kart_analytics_customers.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[ 
+{
+"key":"customer_id",
+"mapped":"customer_id"},
+{"key":"email",
+"mapped":"email"},
+{"key":"first_name",
+"mapped":"first_name"},
+{"key":"last_name",
+"mapped": "last_name"},
+{"key":"created_at",
+"mapped":"created_at"},
+{"key":"updated_at",
+"mapped":"updated_at"},
+{"key":"postal_code",
+"mapped":"postal_code"}, 
+{"key":"city",
+"mapped":"city"},
+{"key":"state",
+"mapped":"state"},
+{"key":"country",
+"mapped":"country"},
+{"key":"phone",
+"mapped":"phone"}
+] 
+}
+
+
+
+order_id	order_number	customer_id	created_at	updated_at	cancelled_at	email	city	state	country	zip	currency	financial_status	fulfillment_status	total_price	total_tax	shipping_cost	phone	total_discounts
+
+
+{ 
+"model": "orders",
+"file_name":"orders1107_2.csv",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/v2kart/ORDERS_split/orders1107_2.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[ 
+{
+"key":"customer_id",
+"mapped": "customer_id"},
+{"key":"email",
+"mapped": "email"},     
+{"key":"order_id",
+"mapped":"order_id"},
+{"key":"order_number",
+"mapped":"order_number"},
+{"key":"created_at",
+"mapped":"created_at"},
+{"key":"zip",
+"mapped":"zip"},
+{"key":"cancelled_at",
+"mapped":"cancelled_at"},
+{"key":"city",
+"mapped":"city"},
+{"key":"state",
+"mapped":"state"},
+{"key":"country",
+"mapped":"country"},
+{"key":"currency",
+"mapped":"currency"},
+{"key":"financial_status",
+"mapped":"financial_status"},
+{"key":"updated_at",
+"mapped":"updated_at"},
+{"key":"fulfillment_status",
+"mapped":"fulfillment_status"},
+{"key":"total_price",
+"mapped":"total_price"},
+{"key":"total_tax",
+"mapped":"total_tax"},
+{"key":"shipping_cost",
+"mapped":"shipping_cost"},
+{"key":"total_discounts",
+"mapped":"total_discounts"},
+{"key":"data_source",
+"mapped":"data_source"},
+{"key":"phone",
+"mapped":"phone"}
+
+] 
+}
+
+
+
+
+order_id	line_item_id	variant_id	product_id	customer_id	quantity	refunded	refunded_quantity	price	selling_price	cost_of_goods_sold	total_discount_amount	fulfillment_status	financial_status
+{ 
+"model": "order_items",
+"file_name":"v2kart_analytics_order_items.csv",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/v2kart/v2kart_analytics_order_items.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[ 
+{
+"key":"product_id",
+"mapped": "product_id"
+},
+{"key":"order_id",
+"mapped": "order_id"
+},
+{"key":"line_item_id",
+"mapped": "line_item_id"
+}, 
+{"key":"customer_id",
+"mapped":"customer_id"
+},
+{"key":"quantity",
+"mapped":"quantity"
+},
+{"key":"refunded",
+"mapped":"refunded"
+},
+{"key":"refunded_quantity",
+"mapped":"refunded_quantity"
+},
+{"key":"selling_price",
+"mapped":"selling_price"
+},
+{"key":"variant_id",
+"mapped":"variant_id"
+},
+{"key":"cost_of_goods_sold",
+"mapped":"cost_of_goods_sold"
+},
+{"key":"total_discount_amount",
+"mapped":"total_discount_amount"
+},
+{"key":"fulfillment_status",
+"mapped":"fulfillment_status"
+},
+{"key":"financial_status",
+"mapped":"financial_status"
+},
+{"key":"price",
+"mapped":"price"
+}
+] 
+}

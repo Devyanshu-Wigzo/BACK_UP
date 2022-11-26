@@ -1,0 +1,50 @@
+upstream fastcgi_backend {
+server unix:/var/run/php/php7.4-fpm.sock;
+}
+
+server {
+        listen 8080;
+        listen [::]:8080;
+        root /home/kakashi-hatake/Desktop/magento;
+        index  index.php index.html index.htm;
+        server_name localhost;
+
+        error_log /var/log/nginx/error.log;
+        access_log /var/log/nginx/access.log;
+
+        client_max_body_size 100M;
+        location / {
+                try_files $uri $uri/ /index.php?$args;
+        }
+        location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+                fastcgi_param   SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        }
+
+        fastcgi_index  index.php;
+        fastcgi_param  SCRIPT_FILENAME  /home/kakashi-hatake/Desktop/magento/php$fastcgi_script_name;
+}
+
+
+
+upstream fastcgi_backend {
+server unix:/var/run/php/php7-fpm.sock;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    root /home/kakashi-hatake/Desktop/magento;
+    index index.php;
+    server_name  localhost;
+
+    client_max_body_size 100M;
+    autoindex on;
+
+    access_log /var/log/nginx/example.com-access.log;
+    error_log /var/log/nginx/example.com-error.log;
+
+
+
+}

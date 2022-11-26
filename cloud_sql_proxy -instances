@@ -1,0 +1,9 @@
+./cloud_sql_proxy -instances=data-storage-242311:asia-east1:stocker-production-01=tcp:127.0.0.1:16000
+
+./cloud_sql_proxy -instances=data-storage-242311:asia-east1:stocker-production-01=tcp:127.0.0.1:20000
+
+
+
+
+
+

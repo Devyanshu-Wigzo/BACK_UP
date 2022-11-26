@@ -1,0 +1,41 @@
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'FetchProductsJobMagento2x', '2022-06-06 13:22:00.811996', '2022-06-06 13:37:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 4, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'ProcessProductJobMagento2x', '2022-06-08 16:38:00.279207', '2022-06-08 16:53:00.000000', 15, '2022-06-08 16:22:00.167180', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'StoreJobStatus', '2022-06-08 13:50:30.631315', '2022-06-08 14:02:00.000000', 12, '2022-06-08 10:20:30.251283', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'ProcessStoreJobMagento2x', '2022-06-08 16:44:00.329849', '2022-06-08 16:59:00.000000', 15, '2022-06-08 16:28:00.441254', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'ProcessVariantsJobMagento2x', '2022-06-08 16:30:00.135849', '2022-06-08 16:45:00.000000', 15, '2022-06-08 16:14:00.467519', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'FetchOrdersJobMagento2x', '2022-06-08 16:40:00.310164', '2022-06-08 16:55:00.000000', 15, '2022-06-08 16:24:00.496122', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'ProcessCustomersJobMagento2x', '2022-06-08 16:42:00.297137', '2022-06-08 16:57:00.000000', 15, '2022-06-08 16:26:00.109642', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'FetchRefundsJobMagento2x', '2022-06-08 16:34:00.203881', '2022-06-08 16:49:00.000000', 15, '2022-06-08 16:18:00.543169', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'FetchGaTransactionJob', '2022-06-08 14:46:00.375972', '2022-06-08 17:46:00.000000', 180, '2022-06-08 11:46:00.318296', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'ProcessOrdersJobMagento2x', '2022-06-08 16:34:00.203881', '2022-06-08 16:49:00.000000', 15, '2022-06-08 16:14:00.467519', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'FetchRefundItemsJobMagento2x', '2022-06-08 16:32:00.179752', '2022-06-08 16:47:00.000000', 15, '2022-06-08 16:16:00.511700', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'FetchCustomersJobMagento2x', '2022-06-08 16:30:00.135849', '2022-06-08 16:45:00.000000', 15, '2022-06-08 16:14:00.467519', 'WAITING', 0, '');
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (1067100, 'FetchOrderItemsJobMagento2x', '2022-06-08 16:32:00.179752', '2022-06-08 16:47:00.000000', 15, '2022-06-08 16:16:00.511700', 'WAITING', 0, '');
+
+
+
+
+
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'ga_access_token', 'str', 'ya29.a0ARrdaM8CYdHH0B_7H-Q-7Bq14ZP1mrqLHu1Lyzlb1S50F5cc_lBdR5XLAB7nHC1DhcyC6cKvn-Zmic8Dv739Q_RUwiW-QvXDPW1gpBNgVhwClRxKiy9UdvMndfTe4K5Cz2-llJJQPKPxc40SbeTuXnDC0qRU');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'is_valid', 'bool', 'True');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'account', 'str', '');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'auth', 'str', '');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'auth_type', 'str', 'ACCESS_TOKEN');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'store_url', 'str', 'rforrabbit.com');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'store_domain', 'str', 'rforrabbit.com');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'platform', 'str', 'MAGENTO2X');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'org_token', 'str', '23MjR_frRmeFcn_WaFvuKg');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'api_rate', 'int', '1');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'api_rate_interval', 'int', '1');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'currency', 'str', 'INR');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'lapse_point', 'int', '72');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'plugin_driver', 'str', 'wigzo');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'ga_refresh_token', 'str', '1//0ecqVyhaAHqOhCgYIARAAGA4SNwF-L9IrGMOb6eKTKj3l2QqrhPQlwlurTXsVea--hpmn7AuZFsJYfJzFdGJVp-bk91bEVL2RBcg');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'ga_view_id', 'str', '85011905');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'first_fetch_succeeded', 'bool', 'True');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'last_fetch_succeeded', 'bool', 'False');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'first_process_succeeded', 'bool', 'True');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'last_process_succeeded', 'bool', 'True');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'fetch_healthy', 'bool', 'False');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'process_healthy', 'bool', 'True');
+INSERT INTO public.store (org_id, key, data_type, value) VALUES (1067100, 'analytics_ready', 'bool', 'True');

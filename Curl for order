@@ -1,0 +1,64 @@
+Curl for order 
+
+
+
+
+curl --location --request POST 'localhost:9000/learn/Tq5njMEjSTCv-Sfvj3HoNg/order/c2f12c34-8f3b-4efe-8c58-4e176d4ee400?_siteid=Tq5njMEjSTCv-Sfvj3HoNg' \
+--header 'authority: tracker.wigzopush.com' \
+--header 'accept: application/json, text/javascript, */*; q=0.01' \
+--header 'accept-language: en-US,en;q=0.9' \
+--header 'content-type: application/json' \
+--header 'origin: https://dev.marche.dailyobjects.com' \
+--header 'sec-ch-ua: "Google Chrome";v="105", "Not)A;Brand";v="8", "Chromium";v="105"' \
+--header 'sec-ch-ua-mobile: ?0' \
+--header 'sec-ch-ua-platform: "Linux"' \
+--header 'sec-fetch-dest: empty' \
+--header 'sec-fetch-mode: cors' \
+--header 'sec-fetch-site: cross-site' \
+--header 'user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36' \
+--data-raw '{
+    "pageuuid": "c2f12c34-8f3b-4efe-8c58-4e176d4ee400",
+    "eventval": {
+        "orderId": "332889",
+        "customer_id": "+918130781200",
+        "phone": "918130781200",
+        "fullName": "dev",
+        "email": "dev@gmail.com",
+        "total_price": 1398,
+        "total_line_items_price": 1398,
+        "ga_transaction_id": "332889",
+        "created_at": "2022-09-26T08:01:45.637Z",
+        "updated_at": "2022-09-26T08:01:45.637Z",
+        "shipping_cost": 0,
+        "total_discounts": 0,
+        "city": "Gurgaon",
+        "state": "Haryana",
+        "country": "India",
+        "zip": "122001",
+        "financial_status": "COD",
+        "taxes_included": "True",
+        "coupons": [],
+        "line_items": [
+            {
+                "line_item_id": "SL-E-WLNT-BRWN-SNPON-AP-IPPR11-2021",
+                "variant_id": "SL-E-WLNT-BRWN-SNPON-AP-IPPR11-2021",
+                "product_id": "SL-E-WLNT-BRWN-SNPON-AP-IPPR11-2021",
+                "price": 1398,
+                "quantity": 1,
+                "product_discount": 0,
+                "fulfillment_status": "Pending",
+                "categories": "Tablet Sleeves",
+                "brand": "apple",
+                "model": "apple",
+                "type": "sleeves"
+            }
+        ]
+    },
+    "source": "web",
+    "u": "https://dev.marche.dailyobjects.com/dailyobjects-walnut-brown-snapon-envelope-sleeve-for-ipad-pro-11-2021/dp?f=pid~SL-E-WLNT-BRWN-SNPON-AP-IPPR11-2021",
+    "e": "c2f12c34-8f3b-4efe-8c58-4e176d4ee400",
+    "_": "2022-09-26T08:01:45.640Z",
+    "eventCategory": "EXTERNAL",
+    "referrer": "https://www.google.com/",
+    "lang": "en-us"
+}'

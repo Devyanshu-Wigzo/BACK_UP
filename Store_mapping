@@ -1,0 +1,47 @@
+34385	8844	is_valid	bool	True
+34386	8844	account	str	""
+34387	8844	auth	str	""
+34388	8844	auth_type	str	ACCESS_TOKEN
+34389	8844	store_url	str	byshree.com/
+34390	8844	store_domain	str	byshree.com/
+34391	8844	platform	str	MAGENTO2X
+34392	8844	org_token	str	78kNQi7GQY22oYerhwvAAw
+34393	8844	api_rate	int	1
+34394	8844	api_rate_interval	int	1
+34395	8844	currency	str	INR
+34397	8844	plugin_driver	str	wigzo
+34398	8844	ga_access_token	str	""
+34399	8844	ga_refresh_token	str	""
+34400	8844	ga_view_id	str	""
+34401	8844	first_fetch_succeeded	bool	False
+34402	8844	last_fetch_succeeded	bool	False
+34403	8844	first_process_succeeded	bool	True
+34404	8844	last_process_succeeded	bool	True
+34405	8844	fetch_healthy	bool	False
+34406	8844	process_healthy	bool	False
+34396	8844	lapse_point	int	25
+
+
+
+34385	8844	is_valid	bool	True
+34386	8844	account	str	""
+34387	8844	auth	str	""
+34388	8844	auth_type	str	ACCESS_TOKEN
+34389	8844	store_url	str	byshree.com/
+34390	8844	store_domain	str	byshree.com/
+34391	8844	platform	str	MAGENTO2X
+34392	8844	org_token	str	78kNQi7GQY22oYerhwvAAw
+34393	8844	api_rate	int	1
+34394	8844	api_rate_interval	int	1
+34395	8844	currency	str	INR
+34397	8844	plugin_driver	str	wigzo
+34398	8844	ga_access_token	str	""
+34399	8844	ga_refresh_token	str	""
+34400	8844	ga_view_id	str	""
+34401	8844	first_fetch_succeeded	bool	False
+34402	8844	last_fetch_succeeded	bool	False
+34403	8844	first_process_succeeded	bool	True
+34404	8844	last_process_succeeded	bool	True
+34405	8844	fetch_healthy	bool	False
+34406	8844	process_healthy	bool	False
+34396	8844	lapse_point	int	25

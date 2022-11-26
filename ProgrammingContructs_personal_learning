@@ -1,0 +1,128 @@
+Programming Contructs 
+  S -> Sequence - Sequence determine the order in which the intruction occurs and take place.
+  S -> Selecetion - Selection determines the path to take when executing the program. For suppose it decide whether the condition is truw or not or following or not. 
+  I -> Iteration - Iteration is reffered as looping it indicate when should a progra reapeat itself unless it mets the requirements.
+       { For loop - in for loop the programs run in a loop for a given time.}
+       *[Variable- a memory allocated in the computer to store the values]
+
+       2 parts of iteration 
+       Definite - For loop come in definite where the time is given for loop
+       Indefinite - while and Repeat until comes in indefinite loop where time is not given and loop will take process until given condition met
+       		Type:-
+       		REPEAT UNTIL is a form of indefinite iteration that tests the condition at the end of the loop. WHILE ENDWHILE tests the condition at the start of the iteration.
+       		WHILE ENDWHILE is a form of indefinite iteration that tests the condition at the start of the loop. REPEAT UNTIL tests the condition at the end of the loop.
+
+Which of the following allows a programmer to implement selection?
+IF THEN ELSE allows a programmer to implement selection.
+
+Which of the following will always run the code within it at least once?
+If the condition is met before the code within a WHILE ENDWHILE loop is run, then the code will not be executed at all. The code inside a REPEAT UNTIL loop will be run at least once, even if the condition has been met.
+
+
+
+
+
+
+
+
+Algorithms
+	
+	Algorithm is a set of intructions described how to solve a problem.
+		Pseudo code - pseudo code is a way to write a code in plain simple english text.
+		moost process fell in three main category.
+			1. input
+			2. process
+			3. output  
+
+
+			*[Array- set of values of same type stored in a sequence in a computer program also know as list.]
+			*[assignment - seeting value of a variable.]
+			*[variable- variables are containers for storing data value.]
+		Flow Chart - Flow chart is a diagram that shows overview of an algorithm.
+
+		Decomposition - Decomposition is breaking down a problem in smaller manageable problems.  
+
+		Abstraction - Removing un-nessasary details from the problems to focus on the details.
+
+		*[Dry run algo means to assign a value to a variable]
+
+	Efficiency of an algorithm is important.
+
+		Sorting algorithm are 
+			[Merge sort - merge sort algorithm repeadly divides a list in half until each has only one item left. The individual list than merged.]
+			[Bubble sort - sorting algorithm which countinuosly passes in the list to be sorted, comapring and swapping item in a wrong order.]
+
+
+Common Algorithm 
+
+	Two algrothm often used in search and sort 
+		search allow data to be examine and specific item to be retreived
+		sort allow data to be set in order.
+
+	Method of searching include:-
+	Binary search - 
+	Linear search - 
+	Method of sorting include:- 
+	Bubble sort -
+	Merge sort - 
+
+
+
+Linear Search 
+	It is an example of searching algorithm. This simple algorithm used to find the value in a list.
+
+	The algorithm runs as follows:-
+		1. identify search items.
+		2. look at the first item in the list.
+		3. Compare the item in the search.
+		4. repeat step tp step untill it reaches the desired items.
+
+Binary Search 
+	It is an example of searching algo. It is more complex search algo and require all item to be in a order.
+	With each loop to be run half of the data is been removed from the search.
+	* To do this it require index of the items. Index means the position in the item.
+
+	To determoine next iterm to be checked the mid point need to be identified. This is done by adding the lowest index to the highest index andthen dividing by two. 
+
+	The algorithm runs as follows:-
+	1. start with setting the counter in the list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+variable :- Used to store data in python\
+
+variable is made with = 
+foe ex name = "devyanshu"
+        |
+        This is variable
+        

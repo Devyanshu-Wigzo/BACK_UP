@@ -1,0 +1,99 @@
+unzip magento-ce-2.4.0-2020-07-24-11-08-21.zip -d /var/www
+
+generated authentication keys from magento website..
+pub key:-  2dc7f3c9de543520dc29058e62cbd36a
+private keys.:-  690d29653f4f32e045b11d91eaf02c9a
+
+Composer:-  Composer is a tool for dependency management in PHP. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
+
+Dependencies in php :- Dependencies are PHP libraries, frameworks, and components that you can use in your web development projects. They help to make coding easier and more efficient, and most projects will rely on a number of them. The issue with dependencies lies in how difficult they can be to manage.
+
+
+
+	composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition magento
+
+sudo apt install php7.4-fpm php7.4-common php7.4-mysql php7.4-gmp php7.4-curl php7.4-intl php7.4-mbstring php7.4-xmlrpc php7.4-gd php7.4-xml php7.4-cli php7.4-zip php7.4-soap php7.4-bcmath
+
+
+sudo systemctl stop php7.4-fpm
+sudo systemctl start php7.4-fpm
+sudo systemctl enable php7.4-fpm
+
+sudo vim /etc/php/7.4/fpm/php.ini
+bin/magento setup:install \
+--base-url=http://localhost/magento2ee \
+--db-host=localhost \
+--db-name=magento \
+--db-user=magento \
+--db-password=Magento@123 \
+--admin-firstname=admin \
+--admin-lastname=admin \
+--admin-email=admin@admin.com \
+--admin-user=admin \
+--admin-password=admin123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \
+--use-rewrites=1 \
+--search-engine=elasticsearch7 \
+--elasticsearch-host=es-host.example.com \
+--elasticsearch-port=9200 \
+--elasticsearch-index-prefix=magento2 \
+--elasticsearch-timeout=15
+
+
+php bin/magento module:disable {Magento_Elasticsearch,Magento_InventoryElasticsearch,Magento_Elasticsearch6,Magento_Elasticsearch7}
+
+
+
+
+--use-secure
+--base-url-secure
+--use-secure-admin
+
+
+->kakashi-hatake@kakashihatake-ThinkPad-L480:/var/www$ sudo chown www-data:www-data -R *
+->kakashi-hatake@kakashihatake-ThinkPad-L480:/var/www/magento$ sudo chown www-data:www-data -R *
+->kakashi-hatake@kakashihatake-ThinkPad-L480:/var/www/magento$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+->sudo systemctl restart nginx
+
+For 403 forbidden error 
+autoindex location is OFF and ON it 
+/etc/nginx/sites-enabled
+
+
+
+ root /home/kakashi-hatake/Desktop/magento;
+
+
+ index index.php index.html index.htm index.nginx-debian.html;
+
+
+
+upstream fastcgi_backend {
+server unix:/var/run/php/php7-fpm.sock;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    root /home/kakashi-hatake/Desktop/magento;
+    index index.php index.html index.htm;
+    server_name  localhost;
+
+    client_max_body_size 100M;
+    autoindex on;
+
+    access_log /var/log/nginx/example.com-access.log;
+    error_log /var/log/nginx/example.com-error.log;
+
+
+
+}
+<IfModule mod_php7.c>
+
+
+
+<IfModule mod_php74.c>

@@ -1,0 +1,74 @@
+Registering a store on stocker...... 
+
+
+STEP1: 
+
+#Register a Store on Stocker
+
+Request: POST
+
+Endpoint: localhost:5000/analytics/store
+
+Authorization: Bearer Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmb3IiOiJ3aWd6byJ9.UaS2QLoTCffxFGFZphMv-52OQhJ9EDPHFH_5axiNDPs
+
+RAW Data: JSON
+{
+   "org_id":11382,
+   "auth":"",
+   "api_rate_interval":1,
+   "auth_type":"ACCESS_TOKEN",
+   "plugin_driver":"wigzo",
+   "store_domain":"www.refreshyourlife.in",
+   "org_token":"Ub4s3AsfQ22RLIZ0-3wJjA",
+   "currency":"INR",
+   "api_rate":1,
+   "account":"",
+   "platform":"SHOPIFY",
+   "ga_refresh_token":"",
+   "ga_access_token":"",
+   "ga_view_id":"",
+   "store_url":"https://www.refreshyourlife.in"
+}
+
+
+Then verify in database | Check store table with org_id | check jobs filtering by org_id
+
+
+STEP2 :  Update JOB status..
+   Only fetching JOBs status for your org_id should be in WAITING
+
+   psql -h localhost -d stocker -U wigzo -W 
+   password: password
+
+   Begin;
+   update job set status='ERROR';
+   update job set status='WAITING' where org_id =1111 and name ilike '%fetch%';
+   COMMIT;
+
+
+
+
+STEP3 : RUN fetching jobs manually
+      ""\\__(^^^)__//""
+
+Request: GET
+
+Endpoint: localhost:5000/analytics/job-scheduler/run
+
+Authorization: Bearer Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmb3IiOiJ3aWd6byJ9.UaS2QLoTCffxFGFZphMv-52OQhJ9EDPHFH_5axiNDPs
+
+
+After changing the version manually check the customer table, order table, 
+
+Single response
+poc 
+Specific order postman ke through
+for Double surety
+
+
+
+MastTheShip#tfk!09*
+
+95863 8168  analytics_integrated {"websiteUrl":"indianterrain.com","shopifyDetails":{"isPaused":true,"code":"","hasShopify":false,"shopName":""},"isIntegrated":true,"platform":"SHOPIFY"}   java.lang.String  2021-11-25 11:01:23.826000 2022-07-14 09:38:38.272000
+
+INSERT INTO public.org_settings (for_org_id, key, value, klass, created, modified) VALUES (11066, 'analytics_integrated', '{"websiteUrl":"www.v2kart.com","shopifyDetails":{"isPaused":true,"code":"","hasShopify":false,"shopName":""},"isIntegrated":true,"platform":"SHOPIFY"}', 'java.lang.String', '2021-11-25 11:01:23.826000', '2022-07-14 09:38:38.272000');

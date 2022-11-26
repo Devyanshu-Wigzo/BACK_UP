@@ -1,0 +1,3 @@
+curl --header "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmb3IiOiJ3aWd6byJ9.UaS2QLoTCffxFGFZphMv-52OQhJ9EDPHFH_5axiNDPs" \
+-H "Content-Type: application/json" --request GET \
+localhost:5000/analytics/job-scheduler/run

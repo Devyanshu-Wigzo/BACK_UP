@@ -1,0 +1,39 @@
+INSERT INTO public.job (org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (14, 9804, 'StoreJobStatus', '1970-01-01 00:00:00.000000', '2022-06-01 08:58:49.790592', 12, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (9804, 'FetchOrdersJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, );
+
+
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (20, 9804, 'ProcessOrdersJob', '1970-01-01 00:00:00.000000', '2022-06-01 08:58:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (21, 9804, 'ProcessVariantsJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:08:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (22, 9804, 'ProcessCustomersJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:08:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (23, 9804, 'ProcessProductJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:13:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (24, 9804, 'ProcessStoreJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:13:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (25, 9804, 'ShopifyCustomerProxyWebhook', '1970-01-01 00:00:00.000000', '2022-06-01 09:13:49.790592', 15, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (26, 9804, 'AnalyzeRFMJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:18:49.790592', 360, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (19, 9804, 'FetchCheckoutsJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, ); 
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (18, 9804, 'FetchProductsJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, );
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (15, 9804, 'FetchGaTransactionJob', '1970-01-01 00:00:00.000000', '2022-06-01 09:18:49.790592', 180, '1970-01-01 00:00:00.000000', 'ERROR', 0, '');
+INSERT INTO public.job (id, org_id, name, last_run_at, next_run_at, run_after, previous_last_run_at, status, pending_tasks, stack_trace) VALUES (17, 9804, 'FetchCustomersJob', '2022-06-01 08:47:35.884796', '2022-06-01 09:02:00.000000', 15, '1970-01-01 00:00:00.000000', 'ERROR', 1, );
+
+
+
+
+
+
+
+
+
+fetch job 
+next run at  2026
+status waiting 
+last run at 2026
+pending task 0
+
+Process 
+1970-01-01
+
+db 
+check whether store is there and not 
+
+
+
+if store is not there we have register the store first 

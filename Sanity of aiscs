@@ -1,0 +1,19 @@
+Sanity of aiscs 
+1. Customer
+   
+   date and time format is different and many of the column doesn't tend to0 have time in them.
+   most the phone numbers include 91- as the country code
+   customer_id is missing that is no issue i guess as we have phone number to give as a primary key.
+
+2. order_item 
+   line_item_id - nullable false
+
+3. product 
+   one product of different size is listed with one product id since product id is a unique key here we need to delete all the duplicate file. 
+
+   hence looking good
+
+4. Refunded
+   headers are different we have rename the headers.
+   requested Amount and refunded amount is different we only take amount as a input which amount is we should take\
+     

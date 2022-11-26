@@ -1,0 +1,84 @@
+#server {
+#    listen 80;
+#    server_name  ;
+#    return 301 https://$host$request_uri;
+#}
+#
+server {
+        location /xmlrpc.php {
+            deny all;
+        }
+        location /trafficbot.live {
+            deny all;
+        }
+        location /Bot-traffic.icu {
+            deny all;
+        }
+        location /Bottraffic.live {
+            deny all;
+        }
+        location /Traffic-bot {
+            deny all;
+        }
+
+
+
+
+
+        #listen 443 ssl http2;
+        listen 80;  
+
+        server_name magento.wigzoapp.com magento.wigzoapp.com;
+
+        #ssl_certificate /etc/nginx/ssl/cloudflare_self_signed_brandsthattext_wildcard.crt;
+        #ssl_certificate_key /etc/nginx/ssl/cloudflare_self_signed_brandsthattext_wildcard.key;
+
+        gzip on;
+        gzip_disable "msie6";
+
+        gzip_comp_level 6;
+        gzip_min_length 1100;
+        gzip_buffers 16 8k;
+        gzip_proxied any;
+        gzip_types  
+            text/plain
+            text/css
+            text/js 
+            text/xml
+            text/javascript
+            application/javascript
+            application/x-javascript
+            application/json
+            application/xml
+            application/rss+xml
+            image/svg+xml;
+
+        client_max_body_size 50M;
+
+
+        location / {
+            root //home/ubuntu/magento/magento;
+            index index.php index.html;
+            try_files $uri $uri/ /index.php?$args;
+
+            location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+                fastcgi_param SCRIPT_FILENAME $request_filename;
+                fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;
+                fastcgi_param PHP_VALUE "upload_max_filesize=30M;post_max_size=30M;memory_limit=256M";
+            }
+
+        }
+
+        # START Nginx Rewrites for Rank Math Sitemaps
+        rewrite ^/sitemap_index.xml$ /index.php?sitemap=1 last;
+        rewrite ^/([^/]+?)-sitemap([0-9]+)?.xml$ /index.php?sitemap=$1&sitemap_n=$2 last;
+        # END Nginx Rewrites for Rank Math Sitemaps
+        # deny access to .htaccess files, if Apache's document root                                                                                                             
+        # concurs with nginx's one                                                                                                                                              
+        #                                                                                                                                                                       
+        location ~ /\.ht {                                                                                                                                                      
+                deny all;                                                                                                                                                       
+        }                                                                                                                                                                       
+}                                                                                                                                                                               
+  

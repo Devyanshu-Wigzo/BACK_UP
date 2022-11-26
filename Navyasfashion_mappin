@@ -1,0 +1,406 @@
+Navyas fashion
+
+1. Product 
+id*	org_id*	created_at	published_at 	updated_at 	product_id	title	body_html	vendor	product_type	handle	image	tags	manufacturer	amount_refunded	cost_of_goods_sold	gross_margin	gross_profit	is_processed	percent_refunded	quantity_refunded	quantity_sold	revenue	total_orders	total_orders_refunded	data_source	ingestion_id*
+
+
+localhost:5000/analytics/org/8168/ingestion/persist	
+{
+    "model": "products", 
+    "file_name": "products_navyafashion.csv", 
+    "csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/navyasfashion/mapped/product_navyafashion.csv", 
+    "webhook_url": "http://localhost:5000/analytics/stocker/webhook",
+    "mapped_headers": [
+  {
+    "key": "id",
+    "mapped": "id"
+  },
+  {
+    "key": "org_id",
+    "mapped": "org_id"
+  },
+  {
+    "key": "ingestion_id",
+    "mapped": "ingestion_id"
+  },
+  {
+    "key": "created_at",
+    "mapped": "created_at"
+  },
+  {
+    "key": "product_id",
+    "mapped": "product_id"
+  },
+  {
+    "key": "title",
+    "mapped": "title"
+  },
+  {
+    "key": "vendor",
+    "mapped": "vendor"
+  },
+  {
+    "key": "product_type",
+    "mapped": "product_type"
+  },
+  {
+    "key": "image",
+    "mapped": "image"
+  },
+  {
+    "key": "tags",
+    "mapped": "tags"
+  },
+  {
+    "key": "manufacturer",
+    "mapped": "manufacturer"
+  },
+  {
+    "key": "variant_id",
+    "mapped": "variant_id"
+  },
+  {
+    "key": "variant_title",
+    "mapped": "variant_title"
+  },
+  {
+    "key": "sku",
+    "mapped": "sku"
+  },
+  {
+    "key": "inventory_quantity",
+    "mapped": "inventory_quantity"
+  },
+  {
+    "key": "price",
+    "mapped": "price"
+  },
+  {
+    "key": "recorded_cost",
+    "mapped": "recorded_cost"
+  },
+  {
+    "key": "published_at",
+    "mapped": "published_at"
+  },
+  {
+    "key": "updated_at",
+    "mapped": "updated_at"
+  },
+  {
+    "key": "body_html",
+    "mapped": "body_html"
+  },
+  {
+    "key": "handle",
+    "mapped": "handle"
+  },
+  {
+    "key": "amount_refunded",
+    "mapped": "amount_refunded"
+  },
+  {
+    "key": "cost_of_goods_sold",
+    "mapped": "cost_of_goods_sold"
+  },
+  {
+    "key": "gross_margin",
+    "mapped": "gross_margin"
+  },
+  {
+    "key": "gross_profit",
+    "mapped": "gross_profit"
+  },
+  {
+    "key": "is_processed",
+    "mapped": "is_processed"
+  },
+  {
+    "key": "percent_refunded",
+    "mapped": "percent_refunded"
+  },
+  {
+    "key": "quantity_refunded",
+    "mapped": "quantity_refunded"
+  },
+  {
+    "key": "quantity_sold",
+    "mapped": "quantity_sold"
+  },
+  {
+    "key": "revenue",
+    "mapped": "revenue"
+  },
+  {
+    "key": "total_orders",
+    "mapped": "total_orders"
+  },
+  {
+    "key": "total_orders_refunded",
+    "mapped": "total_orders_refunded"
+  },
+  {
+    "key": "data_source",
+    "mapped": "data_source"
+  }
+]
+}
+
+
+2. order_item 
+
+id	org_id	order_id	line_item_id	variant_id	product_id	is_processed*	gift_card/	quantity	refunded	refunded_quantity	price	selling_price	net_sales/	gross_sales/	cost_of_goods_sold	total_discount_amount	total_discounts/	fulfillment_status	financial_status	discount_allocations/	customer_id	inserted_cost/	recorded_cost/	data_source/	email/	order_created_at/	order_updated_at/	ingestion_id/	refunded_amount/
+
+{ 
+"model": "order_items",
+"file_name":"order_item",
+"csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/navyasfashion/mapped/order_item.csv",
+"webhook_url": "http://localhost:5000/analytics/stocker/webhook", 
+"mapped_headers": 
+[ 
+{
+"key":"id",
+"mapped": "id"},
+{
+"key":"org_id",
+"mapped": "org_id"},
+{
+"key":"is_processed",
+"mapped": "is_processed"},
+{
+"key":"gift_card",
+"mapped": "gift_card"},
+{
+"key":"net_sales",
+"mapped": "net_sales"},
+{
+"key":"gross_sales",
+"mapped": "gross_sales"},
+{
+"key":"total_discounts",
+"mapped": "total_discounts"},
+{
+"key":"discount_allocations",
+"mapped": "discount_allocations"},
+{
+"key":"inserted_cost",
+"mapped": "inserted_cost"},
+{
+"key":"recorded_cost",
+"mapped": "recorded_cost"},
+{
+"key":"data_source",
+"mapped": "data_source"},
+{
+"key":"email",
+"mapped": "email"},
+{
+"key":"order_created_at",
+"mapped": "order_created_at"},
+{
+"key":"order_updated_at",
+"mapped": "order_updated_at"},
+{
+"key":"ingestion_id",
+"mapped": "ingestion_id"},
+{
+"key":"refunded_amount",
+"mapped": "refunded_amount"},
+{
+"key":"product_id",
+"mapped": "product_id"
+},
+{"key":"order_id",
+"mapped": "order_id"
+},
+{"key":"line_item_id",
+"mapped": "line_item_id"
+}, 
+{"key":"customer_id",
+"mapped":"customer_id"
+},
+{"key":"quantity",
+"mapped":"quantity"
+},
+{"key":"refunded",
+"mapped":"refunded"
+},
+{"key":"refunded_quantity",
+"mapped":"refunded_quantity"
+},
+{"key":"selling_price",
+"mapped":"selling_price"
+},
+{"key":"variant_id",
+"mapped":"variant_id"
+},
+{"key":"cost_of_goods_sold",
+"mapped":"cost_of_goods_sold"
+},
+{"key":"total_discount_amount",
+"mapped":"total_discount_amount"
+},
+{"key":"fulfillment_status",
+"mapped":"fulfillment_status"
+},
+{"key":"financial_status",
+"mapped":"financial_status"
+},
+{"key":"price",
+"mapped":"price"
+}
+] 
+}
+
+
+
+3. Product_variant 
+
+id	org_id	created_at	updated_at	variant_id	product_id	is_processed/	title	sku	image	inventory_quantity	price	revenue	gross_profit	gross_margin	total_orders	quantity_sold	quantity_refunded	amount_refunded	total_orders_refunded	position/	percent_refunded	cost_of_goods_sold	life_time_value/	inventory_velocity/	inventory_depletion/	product_title/	inserted_cost/	recorded_cost/	data_source	ingestion_id
+
+
+
+
+{
+    "model": "product_variants", 
+    "file_name": "product_variant2", 
+    "csv_url": "https://storage.googleapis.com/media.wigzo.com/dev_uploads/navyasfashion/mapped/product_variant3.csv", 
+    "webhook_url": "http://localhost:5000/analytics/stocker/webhook",
+    "mapped_headers": [
+  {
+    "key": "id",
+    "mapped": "id"
+  },
+  {
+    "key": "org_id",
+    "mapped": "org_id"
+  },
+  {
+    "key": "ingestion_id",
+    "mapped": "ingestion_id"
+  },
+  {
+    "key": "created_at",
+    "mapped": "created_at"
+  },
+  {
+    "key": "product_id",
+    "mapped": "product_id"
+  },
+  {
+    "key": "title",
+    "mapped": "title"
+  },
+  {
+    "key": "is_processed",
+    "mapped": "is_processed"
+  },
+  {
+    "key": "position",
+    "mapped": "position"
+  },
+  {
+    "key": "image",
+    "mapped": "image"
+  },
+  {
+    "key": "life_time_value",
+    "mapped": "life_time_value"
+  },
+  {
+    "key": "inventory_velocity",
+    "mapped": "inventory_velocity"
+  },
+  {
+    "key": "variant_id",
+    "mapped": "variant_id"
+  },
+  {
+    "key": "variant_title",
+    "mapped": "variant_title"
+  },
+  {
+    "key": "sku",
+    "mapped": "sku"
+  },
+  {
+    "key": "inventory_quantity",
+    "mapped": "inventory_quantity"
+  },
+  {
+    "key": "price",
+    "mapped": "price"
+  },
+  {
+    "key": "recorded_cost",
+    "mapped": "recorded_cost"
+  },
+  {
+    "key": "inventory_depletion",
+    "mapped": "inventory_depletion"
+  },
+  {
+    "key": "updated_at",
+    "mapped": "updated_at"
+  },
+  {
+    "key": "product_title",
+    "mapped": "product_title"
+  },
+  {
+    "key": "inserted_cost",
+    "mapped": "inserted_cost"
+  },
+  {
+    "key": "amount_refunded",
+    "mapped": "amount_refunded"
+  },
+  {
+    "key": "cost_of_goods_sold",
+    "mapped": "cost_of_goods_sold"
+  },
+  {
+    "key": "gross_margin",
+    "mapped": "gross_margin"
+  },
+  {
+    "key": "gross_profit",
+    "mapped": "gross_profit"
+  },
+  {
+    "key": "percent_refunded",
+    "mapped": "percent_refunded"
+  },
+  {
+    "key": "quantity_refunded",
+    "mapped": "quantity_refunded"
+  },
+  {
+    "key": "quantity_sold",
+    "mapped": "quantity_sold"
+  },
+  {
+    "key": "revenue",
+    "mapped": "revenue"
+  },
+  {
+    "key": "total_orders",
+    "mapped": "total_orders"
+  },
+  {
+    "key": "total_orders_refunded",
+    "mapped": "total_orders_refunded"
+  },
+  {
+    "key": "data_source",
+    "mapped": "data_source"
+  }
+]
+}
+
+
+
+
+
+
+{"error_messages": ["missing column  phone", "missing column  country", "missing column  financial_status", "missing column  zip", "missing column  city", "missing column  currency", "missing column  state"], "total_rows": 232, "parsed_rows": 232}

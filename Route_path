@@ -1,0 +1,25 @@
+/agency                                                                         agency.Routes
+/analytics                                                                      analytics.Routes
+/bigcommerce                                                                    bigcommmerce.Routes
+/conversation                                                                   conversations.Routes
+/damascrm                                                                       damascrm.Routes
+/dashboard/v6                                                                   dashboardv6.Routes
+/fluenco                                                                        fluenco.Routes
+/instagram                                                                      instagram.Routes
+/livechat                                                                       livechat.Routes
+/magiclink                                                                      magiclink.Routes
+/oauth                                                                          oauth.Routes
+/pay                                                                            paymentcollection.Routes
+/rcs                                                                            rcs.Routes
+/smscheckout                                                                    smscheckout.Routes
+/smsreport                                                                      smshandler.Routes
+/su                                                                             su.Routes
+/suppression                                                                    suppression.Routes
+/voice                                                                         voice.Routes
+/wallet                                                                         wallet.Routes
+/webhook                                                                        webhook.Routes
+/whatsapp                                                                       whatsapp.Routes
+/wigzo/lite       
+/wz                                                                             zumigo.Routes
+/zads                                                                           zads.Routes
+/zc                                                                             zc.Routes
